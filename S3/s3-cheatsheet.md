@@ -1,0 +1,14 @@
+- <b>Simple Storage Service (S3) </b> Object-based storage. Store unlimited amount of data without worry of underlying storage infrastructure
+- S3 replicates data across at least <u>  3 AZs to ensure 99.99% Availability </u> and 11'9s of durability
+- Objects contain data (they're like files)
+- - Objects can be size anywhere from <b> <u> 0 Bytes up to 5 Terabytes </u></b>
+- Buckets contain objects. Buckets can also contain folders which can in turn can contain objects
+- Bucket names are unique across all AWS accounts. Like a domain name
+- When you upload a file to S3 successfully you'll receive a HTTP 200 code . <b> Lifecycle Management </b> Objects can be moved between storage classes or objects can be deleted automatically based on schedule
+- <b> Versioning </b> Objects are given a Version ID. When new objects are uploaded the old objects are kept. You can access any object version. When you delete an object the previous object is restored. Once Versioning is turned on it cannot be turned off, only suspended.
+- <b> MFA DELETE </b> enforce DELETE operations to require MFA token in order to delete an object. Must have verioning turned on to use. Can only turn on MFA delete from the AWS CLI. Root Account is only allowed to delete objects 
+- All new buckets are <b> private by default </b>
+Logging can be turned to on a bucket to log to track operations performed on objects 
+- <b> Access Control </b> is configured using <b> Bucket Policies </b> and <b> Access Control Lists (ACL) </b> 
+- <b> Bucket Policies </b> are JSON documents which let you write complex control access 
+- <b> ACLs </b> are the legacy method (not depracated) where you grant access to objects and buckets with simple actions 

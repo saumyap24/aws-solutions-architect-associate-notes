@@ -13,3 +13,6 @@ This notes helped to revise before the certification exam
 ## Table of Contents
 
 - [S3 Storage](./S3/s3.md)
+
+## CheatSheets
+- [S3 cheat sheet](./S3/s3-cheatsheet.md)
