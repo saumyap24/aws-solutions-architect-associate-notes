@@ -28,3 +28,6 @@
 ---
 ## CloudFront Distributions
 ---
+
+- A distribution is a collection of Edge Location. You specific the Origin eg. S3, EC2, ELB, Route53
+- It replicates copies based on your Price Class
