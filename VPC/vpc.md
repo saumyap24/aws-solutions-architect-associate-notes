@@ -12,6 +12,7 @@
     - [VPC Gateway Endpoints](#vpc-gateway-endpoints)
 - [VPC Flow Logs](#vpc-flow-logs)
 - [NACLs](#nacls)
+- [Security Groups](#security-groups)
 
 ---
 ## Introduction to VPC
@@ -101,6 +102,7 @@
 - NAT Gateways/Instances are only intended for EC2 instances to gain outbound access to the internet for things such as security updates .
 - NATs cannot/should not be used as Bastions 
 - System Manager's <b> Sessions Manager </b> replaces the need for Bastions
+
     <img src="../images/VPC/bastion.jpg" width="50%" height="40%"/>
 
 ---
@@ -206,8 +208,8 @@
 ---
 ## NACLs
 ---
-- Network Access COntrol List (NACLs)
-- An (optional) layer of Security that acts as a firewall for controlling traffic in and out of subnet(s).
+- Network Access Control List (NACLs)
+- An (optional) layer of Security that acts as a  <b><u>firewall for controlling traffic in and out of subnet(s) </u></b>.
 - NACLs acts as a virtual firewall at the subnet level
 - VPCs automatically get a default NACL
 - Subnets are associated with NACLs. Subnets can only belong to a single NACL
@@ -217,5 +219,19 @@
 - <b> Use Case </b>
     - We determine there is a malicious actor at a specific IP address is trying to access our instances so we block their IP
     - We never need to SSH into instances so we add a DENY for these subnets. This is just an additional measure in case our security groups SSH port was left open .
+
+        <img src="../images/VPC/nacl-usecase.jpg" width="50%" height="40%"/>
+
+---
+## Security Gorups
+---
+- <b> Security Groups </b> 
+    - A virtual <b> firewall </b> that controls the traffic to and from EC2 Instances
+- Security Groups are associated with Ec2 instances 
+- Each Security Group contains a set of rules that filter traffic coming into (inbound) and out of (outbound) Ec2 instances.
+- There are no 'Deny' rules. All traffic is blocked by default unless a rule specifically allows it.
+- Multiple Instances across multiple subnets can belong to a Security Group.
+
+
 
 

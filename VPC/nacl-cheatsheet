@@ -1,0 +1,10 @@
+- Network Access Control List is commonly known as NACL
+- VPCs are automatically given a default NACL which allows all outbound and inbund traffic 
+- Each subnet within a VPC must be associated with a NACL
+- Subnets can only be associated with a subnet, the subnet will automatically be associated with the default NACL
+- NACL has inbound and outbound rules (just like Security Groups )
+- Rule can either ALLOW or DENY traffic ( unlike Security Groups which can only allow )
+- NACLs are STATELESS (any allowed inbound traffic is also allowed outbound )
+- WHen you create a NACLs it will deny traffic by default 
+- NACLs contain a numbered list of rules that gets evaluated in order from lowest to highest 
+- If you needed to block a single IP address you could via NACLs (Security Groups cannot deny)
