@@ -12,3 +12,21 @@ Logging can be turned to on a bucket to log to track operations performed on obj
 - <b> Access Control </b> is configured using <b> Bucket Policies </b> and <b> Access Control Lists (ACL) </b> 
 - <b> Bucket Policies </b> are JSON documents which let you write complex control access 
 - <b> ACLs </b> are the legacy method (not depracated) where you grant access to objects and buckets with simple actions 
+- <b> Security in Transit </b> Uploading is done over SSL
+- <b> SSE </b> stands for <u> Server Side Encryption </u>, S3 has 3 options for SSE
+- <b> SSE-AES </b> S3 handles the key, uses AES-256 algorithm 
+- <b> SSE-KMS </b> Envelope encryption via AWS KMS and you manage the keys 
+- <b>SSE-C </b> Customer provided key (you manage the key)
+- <b> Client Side Encryption </b>You must encrypt your own files before uploading them to S3
+- <b> Cross Region Replication (CRR) </b> allows you to replicate files across regions for greater durability.You  must have versioning turned on in the source and destination bucket. You can have CRR replicate to bucket in another AWS account
+- <b> Transfer Acceleartion </b> Provide faster and secure uploads from anywhere in the world. Data is uploaded via distinct url to an Edge location. Data is then transported to your S3 bucket via AWS backbone network.
+- <b> Presigned Urls </b> is a URL generated via the AWS CLI and SDK. It provides temporarry access to write or download object data. Presigned URLs are commonly used to access private objects.
+- S3 has <b> 6 different storage classes </b>
+    - <b> Standard </b> Fast 99.99% Availability, 11 9's Durability. Replicated across at least three AZs
+    - <b> Intelligent Tiering </b> Uses ML to analyze your object usage and determine the appropriate storage class. Data is moved to the most cost-effective access tier, without any perfromance impact or added overhead.
+    - <b> Standard Infrequently Accessed (IA) </b>n Still fast! Cheaper if you access files less than once a month. Additional retrieval fee is applied. 50 % less than Standard (reduced availability ) 
+    - <b> One Zone IA </b> Still fast! Objects only exist in one AZ. Availability (is 99.5%). but cheaper then standard IA by 20% less (Reduce durability ) Data could get destroyed. A retrieval fee is applied.
+    - <b> Glacier </b> For long term cold storage. Retrieval of data can take minutes to hours but the off is very cheap storage
+    - <b> Glacier Deep Archive </b> The lowest cost storage class. Data retrieval time is 12 hours
+
+    

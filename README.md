@@ -13,6 +13,8 @@ This notes helped to revise before the certification exam
 ## Table of Contents
 
 - [S3 Storage](./S3/s3.md)
+- [VPC](./VPC/vpc.md)
 
 ## CheatSheets
 - [S3 cheat sheet](./S3/s3-cheatsheet.md)
+- [VPC Endpoint](./VPC/vpc-endpoint-cheatsheet.md)
