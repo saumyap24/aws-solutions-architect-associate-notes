@@ -13,6 +13,7 @@
 - [VPC Flow Logs](#vpc-flow-logs)
 - [NACLs](#nacls)
 - [Security Groups](#security-groups)
+- [NACL v/s Security Groups](#nacl-vs-security-groups)
 
 ---
 ## Introduction to VPC
@@ -232,6 +233,21 @@
 - There are no 'Deny' rules. All traffic is blocked by default unless a rule specifically allows it.
 - Multiple Instances across multiple subnets can belong to a Security Group.
 
+    <img src="../images/VPC/security-groups.jpg" width="50%" height="40%"/>
 
+- Use Case:
+    - You can specify the source to be an IP range or a specific ip (/32 is a specific IP address)
+    - You can specify the source to be another security group
+    - An instance can belong to multiple Security Groups, and rules are permissive (instead of restrictive) Meaning if you have one  Security group which has no allow and you add an allow to another than it will allow.
+- Limits:
+    - You can have upto 10,000 Security Groups in a Region (deafult is 2,500)
+    - You can have 60 inbound rules and 60 outbound rules per security Group
+    -16 Security Groups per Elastic Network Interface (ENI) (default is 5)
+
+---
+## NACL v/s Security Groups
+---
+
+<img src="../images/VPC/nacl_security_groups.png" width="77%" height="40%"/>
 
 
