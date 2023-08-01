@@ -14,9 +14,14 @@ This notes helped to revise before the certification exam
 
 - [S3 Storage](./S3/s3.md)
 - [VPC](./VPC/vpc.md)
+- [CLoudFront](./CloudFront/cloudfront.md)
 
 ## CheatSheets
+
 - [S3 cheat sheet](./S3/s3-cheatsheet.md)
 - [VPC Endpoint](./VPC/vpc-endpoint-cheatsheet.md)
 - [VPC FLow Logs](./VPC/vpc-flow-logs-cheatsheet.md)
 - [NACL](./VPC/nacl-cheatsheet)
+- [CloudFront](./CloudFront/cloudfront-cheatsheet.md)
+- [Aurora](./Aurora/aurora-cheatsheet.md)
+

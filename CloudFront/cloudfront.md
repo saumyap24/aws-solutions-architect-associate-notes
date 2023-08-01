@@ -1,6 +1,8 @@
 - [CloudFront](#cloudfront)
 - [CloudFront Core Components](#cloudfront-core-components)
 - [CloudFront Distributions](#cloudfront-distributions)
+- [Lambda@Edge](#lambdaedge)
+- [CloudFront Protection](#cloudfront-protection)
 ---
 ## CloudFront
 ---
@@ -31,3 +33,45 @@
 
 - A distribution is a collection of Edge Location. You specific the Origin eg. S3, EC2, ELB, Route53
 - It replicates copies based on your Price Class
+- There are two types of Distributions 
+    1. Web (for Websites)
+    2. RTMP (for streaming media)
+- <b> Behaviours </b>
+    - Redirect to HTTPs, Restrict HTTP Methods, Restrict Viewer Access, Set TTLs
+- <b> Invalidations </b>
+    - You can manually invalidate cache on specific files via Invalidations 
+- <b> Error Pages </b>
+    - You can serve up custom error pages eg 404
+- <b> Restrictions </b>
+    - You can use Geo Restriction to blacklist or whitelist specific countries
+
+---
+## Lambda@Edge 
+---
+- Lambda@Edge functions are used to override the behaviour of request and responses 
+- The 4 Avaialaible Edge FUnctions 
+    1. Viewer Request   
+        - When CloudFront receives a request from a Viewer
+    2. Origin request
+        - Before CLoudFRont forwards a request to the origin 
+    3. Origin response
+        - When cloudfront receives a response from the origin 
+    4. Viewer response 
+        - Before CLoudFroont returns the response to the viewer
+
+    <img src="../images/CloudFront/lambda.jpg" width="47%"/>
+
+---
+## CloudFront Protection
+---
+
+- By Default a Distribution allows everyone to have access
+- Original Identity Access (OAI)
+    - A virtual user identity that will be used to give your CloudFront Distirbution permission to fetch a private object 
+- Inorder to use Signed URLs or Signed Cookies you need to have an OAI
+- <b> Signed URLs </b>
+    - (Not the same thing as S3 Presigned URL)
+        - A url with provides temporary access to cached objects 
+- <b> Signed Cookies </b> 
+    - A cookie which is passed along with the request to CloudFront. The advantage of using a Cookie is you want to provide access to multiple restricted files. eg. Video Streaming
+
