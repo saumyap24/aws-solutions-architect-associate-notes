@@ -4,7 +4,7 @@
 - [Deafult VPC](#default-vpc)
 - [VPC Peering](#vpc-peering)
 - [Route Tables](#route-tables)
-- [Internet Gateway](#internet-gateway)
+- [Internet Gateway (IGW)](#internet-gateway-igw)
 - [Bastion / Jumpbox](#bastion-jumpbox)
 - [Direct Connect](#direct-connect)
 - [VPC Endpoints](#vpc-endpoints)
@@ -84,7 +84,7 @@
 ---
 ## Internet Gateway (IGW)
 ---
-- The Internet Gateway allows your VPC access ot the Internet 
+- The Internet Gateway allows your VPC access to the Internet 
 - IGW does two things:
     1. Provide a target in your VPC route tables for internet-routable traffic 
     2. Perform network address translation (NAT) for instances that have been assigned public IPv4 addresses
@@ -168,7 +168,7 @@
 - A Gateway Endpoint is a gateway that is a target for a specific route in your route table, used for traffic destined for a supported AWS service.
 - To create a Gateway Endpoint, you must specify the VPC in which you want to create the endpoint, and the service to which you want to establish the connection
 - AWS Gateway Endpoint currently supports 2 services 
-    - AMazon S3
+    - Amazon S3
     - DynamoDB
 
 ---
