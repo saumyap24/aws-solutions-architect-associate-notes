@@ -14,7 +14,7 @@
 ## What is Data Warehouse ?
 ---
 - <b> What is Data Warehouse  ?</b>
-    - A transaction sumbolizesa unit of work performed within a database management system
+    - A transaction symbolizes unit of work performed within a database management system
     - eg. reads and writes
 
 | Database | Data warehouse |
@@ -41,11 +41,11 @@
 ## Redshift Use Case
 ---
 
-- We want to continously COPY data from 
+- We want to continuously COPY data from 
     1. EMR
     2. S3 and
     3. DynamoDB
-    - to power a custome Business Intelligence tool
+    - to power a customer Business Intelligence tool
 - Using a third-party library we can connect and query Redshift for data. 
 
     <img src="../images/RedShift/redshift-usecase.jpg" width="47%"/>
@@ -61,7 +61,7 @@
 - Since data is stored via column, that means all data is of the same data-type allowing for easy compression
 
 ---
-## Redshift COnfigurations 
+## Redshift Configurations 
 ---
 - <b> Single Node </b>
     - Nodes come in sizes of 160Gb. You can launch a single node to get started with Redshift 

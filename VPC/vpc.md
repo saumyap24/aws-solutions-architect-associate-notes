@@ -14,6 +14,7 @@
 - [NACLs](#nacls)
 - [Security Groups](#security-groups)
 - [NACL v/s Security Groups](#nacl-vs-security-groups)
+- [Secrets Manager](#secrets-manager)
 
 ---
 ## Introduction to VPC
@@ -98,9 +99,9 @@
 ## Bastion / Jumpbox
 ---
 - Bastions are EC2 instances which are security harden.
-- They are designed to help you gain access to your EC2 instances via SSH or RCP that are in a <b> <u> private subent</u> </b>
+- They are designed to help you gain access to your EC2 instances via SSH or RCP that are in a <b> <u> private subnet</u> </b>
 - They are also known as Jump boxes because you are jumping from one box to access another.
-- NAT Gateways/Instances are only intended for EC2 instances to gain outbound access to the internet for things such as security updates .
+- <i><u> NAT Gateways/Instances </u> </i> are only intended for EC2 instances to gain outbound access to the internet for things such as security updates .
 - NATs cannot/should not be used as Bastions 
 - System Manager's <b> Sessions Manager </b> replaces the need for Bastions
 
@@ -250,4 +251,13 @@
 
 <img src="../images/VPC/nacl_security_groups.png" width="77%" height="40%"/>
 
+---
+## Secrets Manager 
+---
 
+- Helps to <u> <i> manage, retrieve and rotate database credentials, application credentials, OAuth tokens, API keys and other secrets throughout their lifecycles 
+</u></i>
+- Helps to <u> improve security posture </u>, because you no longer need hard-coded credentials in application source code.
+    - Storing the credentials in Secrets Manager helps avoid possible compromise by anyone who can inspect the application or the components. 
+    - Replace hard-coded credentials with a runtime call to the Secrets Manager service to retrieve credentials with a runtime call to the Secrets Manager service to retrieve credentials dynamically when you need them. 
+-
