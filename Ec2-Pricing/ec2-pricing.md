@@ -34,7 +34,7 @@
         - <b> All upfront </b> : full payment at the start
         - <b> Partial Upfront </b> : A portion of the cost must be paid and remaining hours billed at a discounted hourly rate
         - <b> No Upfront </b> : billed at a discounted hourly rate for every hour within the term,regardless of whether the Reserved Instance is being used
-    - <i><u> RIs can be shared between multiple accounts within AWS organisation </u> </i>
+    - <i><u> RIs can be shared between multiple accounts within AWS organization </u> </i>
     - <b>Unused RIs </b> can be sold in the <u><i> Reserved Instance Marketplace</i></u>
 
 ---
@@ -57,7 +57,7 @@
 ---
 | Regional RI : purchase for a region                         | Zonal RI : purchase for an Availability Zone                                       |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| does not reserve capacity | reserves capacity in the specified Availibility Zone |
+| does not reserve capacity | reserves capacity in the specified Availability Zone |
 | RI discount applies to instance usage in <u> any AZ</u> in the Region | RI discount applies to instance in the <u> selected AZ </u> (No AZ Flexibility) |
 | Ri discount applied to instance usage within the instance family, regardless of size. Only supported n Amazon Linux, Unix Reserved Instances with default tenancy | No instance size flexibility </br>  Ri discounts applies to instance usage for the specified instance type and size only </br>  |
 | You can queue purchases for regional RI  | You can't queue purchases for Zonal RI | 
@@ -73,7 +73,7 @@
 | Regional Limits | Zonal Limits | 
 | --------------- | ------------ |
 | You cannot exceed your running On-Demand Instance limit by purchasing regional Reserved Instances. The default On-Demand Instance limit is 20.  | You can exceed your running On-Demand Instance limit by purchasing zonal Reserved Instances| 
-| Before purchasing RI ensure On-Demand limit is euqal to or greater than your RI you intend to purchase | If you already have 20 running On-Demand Instances, and you purchase 20 Zonal Reserved Instances, you can launch a further 20 On-Demand Instances that match the specifications of your zonal Reserved Instances |
+| Before purchasing RI ensure On-Demand limit is equal to or greater than your RI you intend to purchase | If you already have 20 running On-Demand Instances, and you purchase 20 Zonal Reserved Instances, you can launch a further 20 On-Demand Instances that match the specifications of your zonal Reserved Instances |
 
 ---
 ## Capacity Reservations 
@@ -97,13 +97,13 @@
 ---
 - EC2 Reserved Instance Marketplace allows you to sell your unused Standard RI to recoup your RI spend for RI you do not intend or cannot use 
 
-- Reserved Instances can be sold after they have been active for at least 30 days and once AWS has recieved the upfront payment (if applicable)
+- Reserved Instances can be sold after they have been active for at least 30 days and once AWS has received the upfront payment (if applicable)
 - You must have a US bank account to sell Reserved Instances on the Reserved Instance Marketplace
 - There must be at least one month remaining in the term of the Reserved Instance you are listing
-- You will retain the pricing and capacity benefit of your reservationuntil it's sold and the transaction is complete 
+- You will retain the pricing and capacity benefit of your reservation until it's sold and the transaction is complete 
 - Your company name ( and address upon request) will be shared with the buyer for tax purposes.
-- A seller can set only the upfront price for a Reserved Instance. The usage price and other configuration (eg. instance type, availability zone, platform) will remain the same as when the Reserved Instance was intially purchased 
+- A seller can set only the upfront price for a Reserved Instance. The usage price and other configuration (eg. instance type, availability zone, platform) will remain the same as when the Reserved Instance was initially purchased 
 -  The term length will be rounded down to the nearest month. For example, a reservation with 9 months and 15 days remaining will appear as 9 months on the Reserved Instance Marketplace.
-- You can sell upti $20,000 in Reserved Instances per year. If you need to sell more Reserved Instances
+- You can sell upto $20,000 in Reserved Instances per year. If you need to sell more Reserved Instances
 - Reserved Instances in the GovCloud region cannot be sold on the Reserved Instance Marketplace
 
