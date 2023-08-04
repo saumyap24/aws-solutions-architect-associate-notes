@@ -45,7 +45,7 @@
 
      <img src="../images/Aurora/aurora-fault-tolerance.jpg" width="47%"/>
 
-- Storage is <u> self-healing </u>, in that data blocks and disks are continously scanned for errors and repaired automatically
+- Storage is <u> self-healing </u>, in that data blocks and disks are continuously scanned for errors and repaired automatically
 
 ---
 ## Aurora Replicas
