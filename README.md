@@ -15,6 +15,7 @@ This notes helped to revise before the certification exam
 - [S3 Storage](./S3/s3.md)
 - [VPC](./VPC/vpc.md)
 - [CLoudFront](./CloudFront/cloudfront.md)
+- [AWS Lambda](./Lambda/lambda.md)
 - [Aurora](./Aurora/aurora.md)
 - [Redshift](./Redshift/redshift.md)
 - [EC2 Pricing](./Ec2-Pricing/ec2-pricing.md)

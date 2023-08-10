@@ -5,7 +5,7 @@
 ## What is Amazon QuickSight ?
 ---
 - Amazon Quicksight is a <u><b> very fast, easy-to-use, cloud -powered business analytics  service </u></b> that makes it easy for all employees within an organization to <i><u>build visualizations, perform ad-hoc analysis, and quickly get business insights </i></u> from their data, anytime on any device.
-- 1/10th the cost of traditional BI Solutions 
+- <b> <u>1/10th</u> </b> the cost of traditional BI Solutions 
 - With QuickSight all users can meet varying analytic needs from the same source of truth through <u> <b> modern interactive dashboards, paginated reports, embedded analytics and natural language queries </u></b>
 ---
 ## Benefits
