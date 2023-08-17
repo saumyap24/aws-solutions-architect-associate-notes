@@ -21,7 +21,7 @@ This notes helped to revise before the certification exam
 - [EC2 Pricing](./Ec2-Pricing/ec2-pricing.md)
 - [EFS](./EFS/efs.md)
 - [Application Integration](./Application-Integration/application-integration.md)
-- [QuickSight](./QuickSight/quicksight.md)
+- [QuickSight](./Quicksight/quicksight.md)
 
 ## CheatSheets
 

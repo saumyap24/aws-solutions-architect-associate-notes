@@ -142,7 +142,7 @@
     - Access services hosted on AWS easily and securely by keeping your network traffic within the AWS network
         - ~$7.5/mo
             -  Pricing per VPC endpoint per AZ ($/hour) 0.01
-            - Pricing per GB data proccessed ($) 0.01 
+            - Pricing per GB data processed ($) 0.01 
 - Interface Endpoints support the following AWS services 
     - API GATeway
     - CloudFormation
