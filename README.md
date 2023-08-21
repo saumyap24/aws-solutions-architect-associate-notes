@@ -12,7 +12,7 @@ This notes helped to revise before the certification exam
 
 ## Table of Contents
 
-- [S3 Storage](./S3/s3.md)
+- [Storage](./Storage/storage.md.md)
 - [VPC](./VPC/vpc.md)
 - [CLoudFront](./CloudFront/cloudfront.md)
 - [AWS Lambda](./Lambda/lambda.md)
@@ -20,12 +20,13 @@ This notes helped to revise before the certification exam
 - [Redshift](./Redshift/redshift.md)
 - [EC2 Pricing](./Ec2-Pricing/ec2-pricing.md)
 - [EFS](./EFS/efs.md)
+- [ElastiCache for Redis](./ElastiCache/elasticache.md)
 - [Application Integration](./Application-Integration/application-integration.md)
 - [QuickSight](./Quicksight/quicksight.md)
 
 ## CheatSheets
 
-- [S3 cheat sheet](./S3/s3-cheatsheet.md)
+- [Storage cheat sheet](./Storage/storage-cheatsheet.md)
 - [VPC Endpoint](./VPC/vpc-endpoint-cheatsheet.md)
 - [VPC FLow Logs](./VPC/vpc-flow-logs-cheatsheet.md)
 - [NACL](./VPC/nacl-cheatsheet)

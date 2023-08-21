@@ -9,7 +9,7 @@
 
 - Content Distribution Network (CDN) creates cached copies of your website at various Edge locations around the world
 - Content Delivery Network (CDN) 
-    - A CDN is a distributed network of servers which delivers web pages and conetent to users based on their geographical location, the origin of the webpage and a content delivery server 
+    - A CDN is a distributed network of servers which delivers web pages and content to users based on their geographical location, the origin of the webpage and a content delivery server 
         - Can be used to deliver an entire website including static, dynamic and streaming
         - Requests for content are served from the nearest Edge Location for the best possible performance
 
@@ -36,7 +36,7 @@
 - There are two types of Distributions 
     1. Web (for Websites)
     2. RTMP (for streaming media)
-- <b> Behaviours </b>
+- <b> Behaviors </b>
     - Redirect to HTTPs, Restrict HTTP Methods, Restrict Viewer Access, Set TTLs
 - <b> Invalidations </b>
     - You can manually invalidate cache on specific files via Invalidations 
@@ -48,16 +48,16 @@
 ---
 ## Lambda@Edge 
 ---
-- Lambda@Edge functions are used to override the behaviour of request and responses 
-- The 4 Avaialaible Edge FUnctions 
+- Lambda@Edge functions are used to override the behavior of request and responses 
+- The 4 Available Edge Functions 
     1. Viewer Request   
         - When CloudFront receives a request from a Viewer
     2. Origin request
-        - Before CLoudFRont forwards a request to the origin 
+        - Before CLoudFront forwards a request to the origin 
     3. Origin response
         - When cloudfront receives a response from the origin 
     4. Viewer response 
-        - Before CLoudFroont returns the response to the viewer
+        - Before CLoudFront returns the response to the viewer
 
     <img src="../images/CloudFront/lambda.jpg" width="47%"/>
 
@@ -67,7 +67,7 @@
 
 - By Default a Distribution allows everyone to have access
 - Original Identity Access (OAI)
-    - A virtual user identity that will be used to give your CloudFront Distirbution permission to fetch a private object 
+    - A virtual user identity that will be used to give your CloudFront Distribution permission to fetch a private object 
 - Inorder to use Signed URLs or Signed Cookies you need to have an OAI
 - <b> Signed URLs </b>
     - (Not the same thing as S3 Presigned URL)
