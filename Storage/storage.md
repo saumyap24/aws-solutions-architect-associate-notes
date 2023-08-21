@@ -278,16 +278,16 @@
 - With S3 Object Lock, you can store objects using <u> <b> write-once-read-many (WORM) </u></b> mode.
 - Object lock can <u> prevent from objects from being deleted or overwritten </u> for a <i> fixed amount of time or indefinitely </i>
 
-### Governance mode 
-- Users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
-- Protect objects against being deleted by most users, but you can still grant some users permission to alter the retention settings or delete the object if necessary.
-- Used to test retention-period settings before creating a compliance- mode retention period
+    ### Governance mode 
+    - Users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.
+    - Protect objects against being deleted by most users, but you can still grant some users permission to alter the retention settings or delete the object if necessary.
+    - Used to test retention-period settings before creating a compliance- mode retention period
 
-### Compliance mode 
----
-- A protected object version can't be overwritten or deleted by any user, including the root user 
-- When an object is locked in compliance mode, its retention mode can't be changed, and tis retention period can't be shortened.
-- Compliance mode helps ensure that an object version can't be overwritten or deleted for the duration of the retention period
+    ### Compliance mode 
+    ---
+    - A protected object version can't be overwritten or deleted by any user, including the root user 
+    - When an object is locked in compliance mode, its retention mode can't be changed, and tis retention period can't be shortened.
+    - Compliance mode helps ensure that an object version can't be overwritten or deleted for the duration of the retention period
 
 
 

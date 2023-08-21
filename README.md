@@ -32,4 +32,6 @@ This notes helped to revise before the certification exam
 - [NACL](./VPC/nacl-cheatsheet)
 - [CloudFront](./CloudFront/cloudfront-cheatsheet.md)
 - [Aurora](./Aurora/aurora-cheatsheet.md)
+- [Glue](./Glue/glue-cheatsheet.md)
+- [API Gateway](./APIGateway/api-gateway-cheatsheet.md)
 

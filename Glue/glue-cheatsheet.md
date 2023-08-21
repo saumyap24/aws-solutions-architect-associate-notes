@@ -1,0 +1,19 @@
+- A fully managed service to extract, transform and load (ETL) your data for analytics
+- Discover and search across different AWS data sets without moving your data
+- AWS Glue retrieves data from sources and writes data to targets stored and transported in various data formats
+    - If your data is stored or transported in Parquet data format, this document introduces you available features for using your data in AWS Glue
+- AWS glue consists of 
+    - Central metadata repository
+    - ETL engine
+    - Flexible scheduler
+- Use Cases:
+    - Run queries against an Amazon S3 data lake 
+        - You can use AWS Glue to make your data available for analytics without moving your data 
+    - Analyze the log data in your data warehouse
+        - Create ETL transcripts to transform, flatten and enrich the data from source to target
+
+- Integration with AWS Glue 
+    - To create database and table schema in the AWS Glue Data Catalog, you can run an AWS Glue crawler from within Athena on a data source, or you can run Data Definition Language (DDL) queries directly in the Athena Query Editor. 
+    - Then, using the database and table schema that you created, you can use Data Manipulation (DML) queries in Athena to query the data.
+- Set up AWS Glue Crawlers using S3 event notifications
+    - 

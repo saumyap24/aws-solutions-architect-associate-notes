@@ -49,6 +49,9 @@
 ## Lambda@Edge 
 ---
 - Lambda@Edge functions are used to override the behavior of request and responses 
+- Lambda@Edge lets you run Lambda functions to customize the content that CloudFront delivers, executing the functions in AWS locations closer to the viewer. 
+- The functions run in response to CloudFront events, without provisioning or managing servers. You can use Lambda functions to change CloudFront requests and responses at the following points:
+
 - The 4 Available Edge Functions 
     1. Viewer Request   
         - When CloudFront receives a request from a Viewer
@@ -60,6 +63,7 @@
         - Before CLoudFront returns the response to the viewer
 
     <img src="../images/CloudFront/lambda.jpg" width="47%"/>
+    <img src="../images/CloudFront/Lamda@edge.jpg" width="47%"/>
 
 ---
 ## CloudFront Protection
