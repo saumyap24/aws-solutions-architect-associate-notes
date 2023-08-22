@@ -20,9 +20,9 @@
 ## Authenticating with Redis AUTH command
 ---
 - Users enter a token (password) on a token-protected Redis server. 
-- Include the parameter <u><i> --auth-token </i></u> (API: <u>AuthToken</u>) with the correct token to create the replication group or cluster. 
+- Include the parameter `--auth-token`  (API: <u>AuthToken</u>) with the correct token to create the replication group or cluster. 
 - Key Parameters:
-    - <i><u> --engine </u></i> - Must be redis
+    - <i><u> `--engine` </u></i> - Must be redis
     - <i><u> --engine-version </u></i> - Must be 3.2.6,4.0.10 or later
     - <i><u> --transit-encryption-enabled </u></i> - Required for authentication and HIPAA eligibility
     - <i><u> --auth-token </u></i> - Required for HIPAA eligibility. This value must be correct token for this token-protected Redis-server

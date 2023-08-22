@@ -225,7 +225,7 @@
         <img src="../images/VPC/nacl-usecase.jpg" width="50%" height="40%"/>
 
 ---
-## Security Gorups
+## Security Groups
 ---
 - <b> Security Groups </b> 
     - A virtual <b> firewall </b> that controls the traffic to and from EC2 Instances
