@@ -8,6 +8,10 @@
 - [Elastic Load Balancer](#elastic-load-balancer)
 - [Security Group](#security-group)
 - [Route 53](#route-53)
+- [AWS Transit Gateway](#aws-transit-gateway)
+- [Amazon EMR](#amazon-emr)
+- [Auto Scaling](#auto-scaling)
+
 ## Amazon EBS
 ---
 
@@ -79,7 +83,12 @@
 
 ## Kinesis
 ---
-
+- A fully managed AWS service that you can use to stream <ins> live video from devices to the AWS Cloud</ins>, or build applications for <strong> real-time video processing or batch-oriented video analytics.</strong>
+- Amazon Kinesis Data Streams enables real-time processing of streaming big data. It provides ordering of records, as well as the ability to read and/or replay records in the same order to multiple Amazon Kinesis Applications
+- A Kinesis data stream is a set of <ins>shards that has a sequence of data records </ins>, and each data record has a <strong>sequence number </strong>that is assigned by Kinesis Data Streams. 
+    - Kinesis <ins>can also easily handle the high volume of messages</ins> being sent to the service.
+    - durable
+    - no missing of messages
 
 ## Storage Gateway
 ---
@@ -98,9 +107,40 @@
 
 - A security group acts as a virtual firewall for your instance to control inbound and outbound traffic.
      
-     <img src="./images/Overview/security-group.jpg" width="67%"/>
+     <img src="./images/Overview/security-group.jpg" width="87%"/>
 
 ## Route 53
 ---
 
 - A highly available and scalable Domain Name System (DNS) web service used for domain registration, DNS routing and health checking
+
+
+## AWS Transit Gateway
+---
+
+- A networking service that uses a hub and spoke model to connect the on-premises data centers and Amazon VPCs to a <ins><em>Single Gateway.</em></ins>
+- With this service, customers only have to create and manage  <ins><em><strong>a single connection from the central gateway into each on-premises data center</ins></em></strong>
+- <strong>Features</strong>:
+    - <strong>Inter-region peering </strong>
+        - allows customers to route traffic
+        - easy and cost-effective way
+    - <strong> Multicast </strong>
+        - allows customers to have fine-grain control on who can consume and produce multicast traffic
+    - <strong>Automated provisioning </strong>
+        - customers can automatically identify the Site-to-site VPN connections and on-premises resources with which they are associated using AWS Transit Gateway
+
+## Amazon EMR
+---
+- EMR (Elastic MapReduce)
+- A managed cluster that <ins>simplifies running big data frameworks </ins>like Apache Hadoop and Apache Spark on AWS to process and analyze vast amounts of data.
+- You can process data for analytics purposes and business intelligence workloads using EMR together with Apache Hive and Apache Pig
+- You can <ins><em>use EMR to move large amounts of data in and out of other AWS data stores </em></ins> and databases like S3 and DynamoDB
+    <img src="./images/Overview/emr.jpg" width="87%"/>
+
+## Auto Scaling 
+---
+- Configure automatic scaling for the AWS resources quickly through a scaling plan that uses <strong> Dynamic Scaling </strong>and <strong>Predictive scaling </strong>.
+- <strong><em>Useful for </em></strong>:
+    - Cyclical traffic such as high use of resources during regular business hours and low use of resources
+    - On and Off traffic such as batch processing, testing and periodic analysis 
+    - Variable traffic patterns, such as software for marketing growth with periods of spiky growth
