@@ -7,7 +7,7 @@
 ---
 ## Amazon Redshift
 ---
-- Fully managed <b> <u> Petabyte-size Data warehouse </u></b>. 
+- Fully managed <b> <ins> Petabyte-size Data warehouse </ins></b>. 
 - Analyze (Run complex SQL queries) on massive amounts of data Columnar Store database
 
 ---
@@ -28,14 +28,14 @@
 ---
 ## Introduction to Redshift
 ---
-- AWS Redshift is the AWS managed, petabyte-scale solution for <u> Data Warehousing </u>
-- Pricing starts at just <u> $0.25 per hour </u> with no upfront costs or commitments. 
+- AWS Redshift is the AWS managed, petabyte-scale solution for <ins> Data Warehousing </ins>
+- Pricing starts at just <ins> $0.25 per hour </ins> with no upfront costs or commitments. 
 - Scale up to petabytes for $1000 per terabyte , per year
 - Redshift price is less than 1/10 cost of most similar services 
 - Redshift is used for Business Intelligence
-- Redshift uses <u> OLAP (Online Analytics Processing System)</u>
-- Redshift is <b> <u> Columnar Storage Database  </u> </b>
-- Columnar Storage for database tables is an important factor in optimizing analytic query performance because it <u> drastically reduces the overall disk I/O requirements </u> and reduces the amount of data you need to load from disk
+- Redshift uses <ins> OLAP (Online Analytics Processing System)</ins>
+- Redshift is <b> <ins> Columnar Storage Database  </ins> </b>
+- Columnar Storage for database tables is an important factor in optimizing analytic query performance because it <ins> drastically reduces the overall disk I/O requirements </ins> and reduces the amount of data you need to load from disk
 
 ---
 ## Redshift Use Case

@@ -25,22 +25,22 @@
 - data storage architecture that manages data as objects, as opposed to other storage architectures:
     - file systems: which manages data as files and fire hierarchy
     - block storage- which manages data as blocks within sectors and tracks
-        - S3 provides with <u> Unlimited storage </u>
+        - S3 provides with <ins> Unlimited storage </ins>
         - Need not think about underlying infrastructure
         - S3 console provides an interface for you to upload and access your data 
-        - Individual <u> Object </u> can be store form <u> 0 Bytes to 5 Terabytes </u> in size
+        - Individual <ins> Object </ins> can be store form <ins> 0 Bytes to 5 Terabytes </ins> in size
 
 | **S3 Object**                                                                   | **S3 Bucket**                                                           |
 | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | - Obejcts contain data(files)                                                   | - Buckets hold objects                                                  |
 | - They are like files                                                           | - Buckets can have folders which can turn in hold objects               |
-| Object may consists of:  </br> - <b> Key </b> this is the name of the object </br> - <b> Value </b> data iteself is made up of sequence of bytes   <br>- <b> Version Id </b> version of object (when versioning is enabled) <br> - <b> Metadata </b> additional information attached to the object                                               | - S3 is universal namespace so domain names must be <u> Unique </u> (like having a domain name)    | 
+| Object may consists of:  </br> - <b> Key </b> this is the name of the object </br> - <b> Value </b> data iteself is made up of sequence of bytes   <br>- <b> Version Id </b> version of object (when versioning is enabled) <br> - <b> Metadata </b> additional information attached to the object                                               | - S3 is universal namespace so domain names must be <ins> Unique </ins> (like having a domain name)    | 
 
 ---
 ## S3 Storage Classes 
 --- 
 
-- AWS offers a range of S3 Storage classes that<u> trade Retrieval, Time, Accessability and Durability for Cheaper Storage </u>
+- AWS offers a range of S3 Storage classes that<ins> trade Retrieval, Time, Accessability and Durability for Cheaper Storage </ins>
 
 
 
@@ -62,7 +62,7 @@
 
 - <b> S3 Standard-IA (Infrequent Access) </b>
     - Still Fast! Cheaper if you access files less than once a month
-    - <u> Additional retrieval fee is applied</u>. 50% less than standard (reduced availability)
+    - <ins> Additional retrieval fee is applied</ins>. 50% less than standard (reduced availability)
 
 - <b> S3 One-Zone-IA </b>
     - Still fast! Objects only exist in one AZ. 
@@ -73,7 +73,7 @@
 
 - <b> S3 Glacier </b>
     - For long term cold storage
-    - Retrieval of data can take minutes to hours but the off is <u> very cheap storage </u>
+    - Retrieval of data can take minutes to hours but the off is <ins> very cheap storage </ins>
 
 - <b> S3 Glacier Deep Archive </b>
     - The lowest cost storage class
@@ -166,8 +166,8 @@
 ---
 
 - Fast and secure transfer of files<b>  over long distances </b> between your end users and an S3 bucket
-- Utilizes <b> <u> CloudFront's </u></b> distributed <b><u> Edge locations </u></b>
-- Instead of uploading to your bucket, users use a <i><u> distinct URL </u></i> for an Edge location
+- Utilizes <b> <ins> CloudFront's </ins></b> distributed <b><ins> Edge locations </ins></b>
+- Instead of uploading to your bucket, users use a <i><ins> distinct URL </ins></i> for an Edge location
 - As data arrives at the Edge location it is automatically routed to S3 over a specially optimized network path. (Amazon's backbone network)
 
     <img src="../images/S3/transfer-acceleration.jpg" width="50%" />
@@ -176,7 +176,7 @@
 ## Presigned URLs
 ---
 - Generates a URL which provides temporary access to an object to either upload or download object data.
-- Presigned Urls are commonly used to <u> provide access to <b> private objects </b></u>
+- Presigned Urls are commonly used to <ins> provide access to <b> private objects </b></ins>
 - Can use AWS CLI or AWS SDK to generate Presigned Urls
 
     <img src="../images/S3/presigned-urls.jpg" width="50%" height= "30%" />
@@ -196,13 +196,13 @@
 
     <img src="../images/S3/mfa-delete-log.jpg" width="50%" height= "30%" />
 
-- Only the bucket owner logged in as <u><b> Root User</b></u> can <b> DELETE</b> objects from bucket
+- Only the bucket owner logged in as <ins><b> Root User</b></ins> can <b> DELETE</b> objects from bucket
 
 ---
 ## AWS Snow Family
 ---
 
-- AWS Snow Family are <u> Storage and compute devices used to physically move data in or out the cloud </u> when moving data over the internet or private connection it to slow, difficult or costly
+- AWS Snow Family are <ins> Storage and compute devices used to physically move data in or out the cloud </ins> when moving data over the internet or private connection it to slow, difficult or costly
 
  ![Snow family](../images/S3/snow_family.png)
 
@@ -211,29 +211,29 @@
  ---
 
 - <b> Simple Storage Service (S3)</b>
-    - A <u> serverless object storage service </u> is created   
+    - A <ins> serverless object storage service </ins> is created   
     - can upload very large files and unlimited amount of files 
     - you pay for what you store
     - Need not worry about the underlying file-system or upgrading the disk size
 
 - <b> S3 Glacier </b>
     - Cold storage service
-    - <u> low cost storage solution </u> for <i> archiving and long-term backup </i>
+    - <ins> low cost storage solution </ins> for <i> archiving and long-term backup </i>
     - Uses previous generation HDD drives to get that low cost
     - highly secure and durable
 
 - <b> Elastic Block Store (EBS) </b>
-    - <u> a persistent block storage service </u>
+    - <ins> a persistent block storage service </ins>
     - virtual hard drive in the cloud to attach to EC2 instances 
     - can choose different kinds of storage: SSD, IOPS, SSD, Throughput HHD, Cold HHD
 
 - <b> Elastic File Storage (EFS) </b>
-    - <u> a cloud-native NFS file system service </u>
-    - File storage you can mount to <u> multiple Ec2 instances at the same time</u>
+    - <ins> a cloud-native NFS file system service </ins>
+    - File storage you can mount to <ins> multiple Ec2 instances at the same time</ins>
     - When you need to share files between multiple EC2 instances
 
 - <b> Storage Gateway </b>
-    - <u> a hybrid cloud storage </u> service that extends your on-premise storage to cloud
+    - <ins> a hybrid cloud storage </ins> service that extends your on-premise storage to cloud
         - <b> File Gateway </b> : extends your local storage to AWS S3
         - <b> Volume Gateway </b> : caches your local drives to S3 so you have continuous backup of files on cloud
         - <b> Tape Gateway </b> : stores files on virtual tapes for very cost effective and long term storage
@@ -245,7 +245,7 @@
     - <b> Snowcone </b> very small version of snowball that can transfer 8TB of data
 
 - <b> AWS Backup </b>
-    - a <u> fully managed backup service </u>
+    - a <ins> fully managed backup service </ins>
     - centralize and automate the backup of the backup data across multiple AWS services 
     - eg. EC2, EBS, RDS, DynamoDB, EFS, Storage Gateway
     - can create backup plans
@@ -254,13 +254,13 @@
     - Continuously replicates your machines into low cost staging area in your target AWS account and preferred region enabling fast and reliable recovery if one of the data center fails
 
 - <b> Amazon FSx </b>
-    - <u>a feature rich and highly-performant file system</u>
+    - <ins>a feature rich and highly-performant file system</ins>
     - Can be used for Windows (SMB) or Linux (Lustre)
         - <b> Amazon Fsx for Window File Server </b> uses the SMB protocol to and allows you to mount FSx to windows servers
         - <b> Amazon FSx for Lustre </b> uses Linux's Lustre file systems and allows you to mount FSx to Linux servers 
 
 - <b> Amazon Athena </b>
-    - A serverless, interactive analytics service built on open-source frameworks, <u> <b>supporting open-table and file formats.</u></b>
+    - A serverless, interactive analytics service built on open-source frameworks, <ins> <b>supporting open-table and file formats.</ins></b>
     - Athena provides simplified flexible way to analyze petabytes of data where it lives
     - Analyze data or build applications from an S3 data lake and 30 data sources, including on-premises data sources or other cloud systems using SQL or Python
 
@@ -275,8 +275,8 @@
 
 ## S3 Object Lock 
 ---
-- With S3 Object Lock, you can store objects using <u> <b> write-once-read-many (WORM) </u></b> mode.
-- Object lock can <u> prevent from objects from being deleted or overwritten </u> for a <i> fixed amount of time or indefinitely </i>
+- With S3 Object Lock, you can store objects using <ins> <b> write-once-read-many (WORM) </ins></b> mode.
+- Object lock can <ins> prevent from objects from being deleted or overwritten </ins> for a <i> fixed amount of time or indefinitely </i>
 
     ### Governance mode 
     - Users can't overwrite or delete an object version or alter its lock settings unless they have special permissions.

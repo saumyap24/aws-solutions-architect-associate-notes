@@ -12,13 +12,13 @@
 ---
 ## Reserved Instances (RI)
 
-- Designed for applications that have a <b><u> steady state,</u> <u> predictable usage</u> </b> or require <b><u> reserved capacity.</u> </b>
+- Designed for applications that have a <b><ins> steady state,</ins> <ins> predictable usage</ins> </b> or require <b><ins> reserved capacity.</ins> </b>
 - Reduced Pricing is based on <b> Term</b> x <b>Class Offering </b> x <b>Payment Option </b>
     - ### Term
         - <i>{The longer the term the greater the savings}</i>
-        - Commit to <u> 1 year  or 3 Year contract </u>
+        - Commit to <ins> 1 year  or 3 Year contract </ins>
         - Reserved Instances do not renew automatically
-        - When it is <u> expired it will use on-demand </u> with no interruption to service
+        - When it is <ins> expired it will use on-demand </ins> with no interruption to service
     - ### Class 
         - <i> {The less flexible the greater savings} </i>
         - <b> Standard </b>
@@ -34,8 +34,8 @@
         - <b> All upfront </b> : full payment at the start
         - <b> Partial Upfront </b> : A portion of the cost must be paid and remaining hours billed at a discounted hourly rate
         - <b> No Upfront </b> : billed at a discounted hourly rate for every hour within the term,regardless of whether the Reserved Instance is being used
-    - <i><u> RIs can be shared between multiple accounts within AWS organization </u> </i>
-    - <b>Unused RIs </b> can be sold in the <u><i> Reserved Instance Marketplace</i></u>
+    - <i><ins> RIs can be shared between multiple accounts within AWS organization </ins> </i>
+    - <b>Unused RIs </b> can be sold in the <ins><i> Reserved Instance Marketplace</i></ins>
 
 ---
 ## Reserved Instance (RI) Attributes 
@@ -58,7 +58,7 @@
 | Regional RI : purchase for a region                         | Zonal RI : purchase for an Availability Zone                                       |
 | ----------------------------------------------------------- | ---------------------------------------------------------------------------------- |
 | does not reserve capacity | reserves capacity in the specified Availability Zone |
-| RI discount applies to instance usage in <u> any AZ</u> in the Region | RI discount applies to instance in the <u> selected AZ </u> (No AZ Flexibility) |
+| RI discount applies to instance usage in <ins> any AZ</ins> in the Region | RI discount applies to instance in the <ins> selected AZ </ins> (No AZ Flexibility) |
 | Ri discount applied to instance usage within the instance family, regardless of size. Only supported n Amazon Linux, Unix Reserved Instances with default tenancy | No instance size flexibility </br>  Ri discounts applies to instance usage for the specified instance type and size only </br>  |
 | You can queue purchases for regional RI  | You can't queue purchases for Zonal RI | 
 

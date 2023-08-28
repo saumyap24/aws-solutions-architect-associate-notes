@@ -9,5 +9,5 @@
     - Usage Plan 
         - Provides selected API clients with access to one or more deployed APISs. You can use a usage plan to configure throttling and quota limits, which are enforced on individual client API keys 
 - Features:
-    - Amazon API Gateway provides <b> <u> throttling at multiple levels including global and by a service call.</u></b> Throttling limits can be set for standard rates and bursts.
+    - Amazon API Gateway provides <b> <ins> throttling at multiple levels including global and by a service call.</ins></b> Throttling limits can be set for standard rates and bursts.
         -  For example, API owners can set a rate limit of 1,000 requests per second for a specific method in their REST APIs, and also configure Amazon API Gateway to handle a burst of 2,000 requests per second for a few seconds.

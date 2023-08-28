@@ -1,5 +1,5 @@
 - CloudFront is a CDN (Content Distribution Network). It makes website load fast by serving cached content that is nearby
-- CloudFront distributes cached copy at <u> Edge Locations </u>
+- CloudFront distributes cached copy at <ins> Edge Locations </ins>
 - Edge Locations aren't just not read-only , you can write them eg. PUT objects 
 - TTL (Time to live) defines how long until the cache expires (refreshes cache)
 - When you invalidate your cache, you are forcing it to immediately expire (refreshes cached data)
@@ -10,5 +10,5 @@
     - Web Distribution (statis website content) 
     - RTMP (steaming media)
 - Origin Identity Access (OAI) is used access private S3 buckets 
-- Access to <b> cached content can be protected</b> via <u> Signed URLs or Signed Cookies </u>
+- Access to <b> cached content can be protected</b> via <ins> Signed URLs or Signed Cookies </ins>
 - Lambda@Edge allows you to pass each request through a Lambda to change the behavior of the response

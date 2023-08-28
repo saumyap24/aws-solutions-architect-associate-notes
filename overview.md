@@ -15,35 +15,37 @@
 - [Secrets Manager](#secrets-manager)
 - [Textract](#textract)
 - [RPO and RTO](#rpo-and-rto)
+- [EC2](#ec2)
+
 ## Amazon EBS
 ---
 
 - <b> Amazon EBS </b> provides three volume types to best meet the needs of your workloads: 
     - <b> General Purpose (SSD) </b>
-        - General Purpose (SSD) volumes are suitable for a <u>broad range of workloads, including small to medium-sized databases, development and test environments, and boot volumes.</u>
+        - General Purpose (SSD) volumes are suitable for a <ins>broad range of workloads, including small to medium-sized databases, development and test environments, and boot volumes.</ins>
     - <b> Provisioned IOPS (SSD) </b>
-        - These volumes offer storage with consistent and low-latency performance and are designed for I/O intensive applications such as <u>large relational or NoSQL databases. </u>
+        - These volumes offer storage with consistent and low-latency performance and are designed for I/O intensive applications such as <ins>large relational or NoSQL databases. </ins>
     - <b>Magnetic</b>
-        - for workloads where <u>data are accessed infrequently, and applications where the <i>lowest storage cost</i> is important. </u>
+        - for workloads where <ins>data are accessed infrequently, and applications where the <i>lowest storage cost</i> is important. </ins>
 
 ## Cloudwatch
 ---
 - Monitoring tool for your AWS resources and applications.
-- <u> Display metrics and create alarms </u> that watch the metrics and send notifications or automatically make changes to the resources you are monitoring when a threshold is breached.
+- <ins> Display metrics and create alarms </ins> that watch the metrics and send notifications or automatically make changes to the resources you are monitoring when a threshold is breached.
 
 ## AWS Identity and Access Management
 ---
-- You can use an <i><u>IAM role to specify permissions for users </u></i> whose identity is federated from your organization or a third-party identity provider (IdP).
+- You can use an <i><ins>IAM role to specify permissions for users </ins></i> whose identity is federated from your organization or a third-party identity provider (IdP).
     - <b>Federating users with SAML 2.0</b>
-        - If your organization already uses an identity provider <u>software package that supports SAML 2.0 (Security Assertion Markup Language 2.0)</u>, you can create trust between your organization as an identity provider (IdP) and AWS as the service provider. 
-        - You can then use SAML to provide your users with <u>federated single-sign on (SSO) </u>to the AWS Management Console or federated access to call AWS API operations. 
+        - If your organization already uses an identity provider <ins>software package that supports SAML 2.0 (Security Assertion Markup Language 2.0)</ins>, you can create trust between your organization as an identity provider (IdP) and AWS as the service provider. 
+        - You can then use SAML to provide your users with <ins>federated single-sign on (SSO) </ins>to the AWS Management Console or federated access to call AWS API operations. 
         - <b>For example</b>: if your company uses Microsoft Active Directory and Active Directory Federation Services, then you can federate using SAML 2.0
-    - <b>Federating users by creating a custom identity <u>broker application</u></b>
-        - If your <u>identity store is not compatible with SAML 2.0,</u> then you can <i>build a custom <b>identity broker application </b> to perform a similar function. </i>
-        - The broker application <u>authenticates users, requests temporary credentials for users from AWS,</u> and then provides them to the user to access AWS resources.
+    - <b>Federating users by creating a custom identity <ins>broker application</ins></b>
+        - If your <ins>identity store is not compatible with SAML 2.0,</ins> then you can <i>build a custom <b>identity broker application </b> to perform a similar function. </i>
+        - The broker application <ins>authenticates users, requests temporary credentials for users from AWS,</ins> and then provides them to the user to access AWS resources.
         - The application verifies that employees are signed into the existing corporate network's identity and authentication system, which might use LDAP, Active Directory, or another system. The identity broker application then obtains temporary security credentials for the employees.
         - To <i>get temporary security credentials, </i>the identity broker application calls either `AssumeRole` or `GetFederationToken` to obtain temporary security credentials, depending on how you want to manage the policies for users and when the temporary credentials should expire.
-        - The <u>call returns temporary security credentials consisting of an AWS access key ID, a secret access key, and a session token.</u> The identity broker application makes these temporary security credentials available to the internal company application. 
+        - The <ins>call returns temporary security credentials consisting of an AWS access key ID, a secret access key, and a session token.</ins> The identity broker application makes these temporary security credentials available to the internal company application. 
 
             <img src="./images/Overview/broker-application.jpg" width="47%" height="40%"/>
         - This scenario has the following attributes:
@@ -58,7 +60,7 @@
 ---
 - Supports <b>Aurora, MySQL, MariaDB, PostgreSQL, Oracle, Microsoft SQL Server.</b>
 - <b>DB Instance </b>
-    - For production OLTP use cases, use <b>Multi-AZ deployments </b> for <u>enhanced fault tolerance with Provisioned <i>IOPS</u> </i>storage for fast and predictable performance.
+    - For production OLTP use cases, use <b>Multi-AZ deployments </b> for <ins>enhanced fault tolerance with Provisioned <i>IOPS</ins> </i>storage for fast and predictable performance.
         - You can use PIOPS storage with Read Replicas for MySQL, MariaDB or PostgreSQL.
     - <b> Magnetic </b>
         - Doesn’t allow you to scale storage when using the SQL Server database engine.
@@ -71,15 +73,15 @@
 ---
 - An interactive query service that makes it easy to analyze data directly in Amazon S3 and other data sources using SQL.
 - <i>Serverless</i>
-- Has a <u>built-in query editor.</u>
+- Has a <ins>built-in query editor.</ins>
 - highly available and durable
--  <u>integrates with <b>Amazon QuickSight </b></u> for easy data visualization.
+-  <ins>integrates with <b>Amazon QuickSight </b></ins> for easy data visualization.
 - retains query history for 45 days.
 - You pay only for the queries that you run. You are charged based on the amount of data scanned by each query.
 - There are 2 types of cost controls:
     - <b> Per-query limit </b> 
         - specifies a threshold for the total amount of data scanned per query. 
-        - Any query running in a workgroup is <u>canceled once it exceeds the specified limit</u>. 
+        - Any query running in a workgroup is <ins>canceled once it exceeds the specified limit</ins>. 
         - Only one per-query limit can be created
     - <b>Per-workgroup limit</b> 
         - this limits the total amount of data scanned by all queries running within a specific time frame. 
@@ -140,6 +142,7 @@
 - A managed cluster that <ins>simplifies running big data frameworks </ins>like Apache Hadoop and Apache Spark on AWS to process and analyze vast amounts of data.
 - You can process data for analytics purposes and business intelligence workloads using EMR together with Apache Hive and Apache Pig
 - You can <ins><em>use EMR to move large amounts of data in and out of other AWS data stores </em></ins> and databases like S3 and DynamoDB
+
     <img src="./images/Overview/emr.jpg" width="87%"/>
 
 ## Auto Scaling 
@@ -191,4 +194,7 @@
 <img src="./images/Overview/rto-rpo.jpg" width="87%"/>
     
     - Data loss is measured from most recent backup to the point of disaster. Downtime is measured from the point of disaster until fully recovered and available for service.
+
+## EC2
+---
 

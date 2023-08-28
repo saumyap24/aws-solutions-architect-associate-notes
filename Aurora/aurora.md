@@ -16,8 +16,8 @@
 ---
 - Combines the speed and availability of high-end databases with the simplicity and cost-effectiveness of open source databases
 - Aurora can run either MySQL or Postgres compatible engines 
-- Aurora  MYSQL is <u> 5x better performance </u> than traditional MySQL
-- Aurora Postgres is <u>3x better performance </u> than traditional Postgres
+- Aurora  MYSQL is <ins> 5x better performance </ins> than traditional MySQL
+- Aurora Postgres is <ins>3x better performance </ins> than traditional Postgres
 - 1/10th costs of other solutions offering similar performance and availability
 
 ---
@@ -30,22 +30,22 @@
 ---
 ## Aurora Availability
 ---
-- A minimum of <u> 3 availability zones </u> each contain <u> 2 copies of your data at all times</u>.
-- That means there are <b><i><u> 6 copies </b></i></u> 
-- If in case you lose up to <u> 2 copies of your data </u> without affecting write availability
-- If in case you lose up to <u> 3 copies of your data </u> without affecting read availability
+- A minimum of <ins> 3 availability zones </ins> each contain <ins> 2 copies of your data at all times</ins>.
+- That means there are <b><i><ins> 6 copies </b></i></ins> 
+- If in case you lose up to <ins> 2 copies of your data </ins> without affecting write availability
+- If in case you lose up to <ins> 3 copies of your data </ins> without affecting read availability
 
     <img src="../images/Aurora/aurora-availability.jpg" width="47%"/>
 
 ---
 ## Fault Tolerance and Durability
 ---
-- Aurora Backup and Failover is handled <u> automatically</u>
-- <u> Snapshots of data </u> can be <b> shared </b> with other AWS accounts
+- Aurora Backup and Failover is handled <ins> automatically</ins>
+- <ins> Snapshots of data </ins> can be <b> shared </b> with other AWS accounts
 
      <img src="../images/Aurora/aurora-fault-tolerance.jpg" width="47%"/>
 
-- Storage is <u> self-healing </u>, in that data blocks and disks are continuously scanned for errors and repaired automatically
+- Storage is <ins> self-healing </ins>, in that data blocks and disks are continuously scanned for errors and repaired automatically
 
 ---
 ## Aurora Replicas

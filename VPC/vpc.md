@@ -66,7 +66,7 @@
 - VPC  Peering allows to connect one VPC with another over a direct network route using private IP addresses
 - Instances on peered VPCs <b> behave </b> just like they are on the <b>same network</b>
 - Connect VPCs across <b>same</b> or <b> different AWS accounts </b> and <b> regions </b>
-- Peering uses a <u> <b> Star Configuration: 1 Central VPC - 4 other VPCs</b></u>
+- Peering uses a <ins> <b> Star Configuration: 1 Central VPC - 4 other VPCs</b></ins>
 - <b> No Transitive Peering </b> (peering must take place directly between VPCs)
     - Needs a one to one connect to immediate VPC
 - <b> No Overlapping CIDR Blocks </b>
@@ -99,9 +99,9 @@
 ## Bastion / Jumpbox
 ---
 - Bastions are EC2 instances which are security harden.
-- They are designed to help you gain access to your EC2 instances via SSH or RCP that are in a <b> <u> private subnet</u> </b>
+- They are designed to help you gain access to your EC2 instances via SSH or RCP that are in a <b> <ins> private subnet</ins> </b>
 - They are also known as Jump boxes because you are jumping from one box to access another.
-- <i><u> NAT Gateways/Instances </u> </i> are only intended for EC2 instances to gain outbound access to the internet for things such as security updates .
+- <i><ins> NAT Gateways/Instances </ins> </i> are only intended for EC2 instances to gain outbound access to the internet for things such as security updates .
 - NATs cannot/should not be used as Bastions 
 - System Manager's <b> Sessions Manager </b> replaces the need for Bastions
 
@@ -126,9 +126,9 @@
 - There are two types of VPC Endpoints
     1. Interface endpoints
     2. Gateway Endpoints
-- Eliminates the need for an <b> <u>Internet Gateway, NAT device, VPN connection or AWS Direct Connect </u></b> connections 
-- Instances in the VPC <u> do not require a public IP address </u> to communicate with service resources
-- Traffic between your VPC and other services <u> does not leave the AWS network</u>
+- Eliminates the need for an <b> <ins>Internet Gateway, NAT device, VPN connection or AWS Direct Connect </ins></b> connections 
+- Instances in the VPC <ins> do not require a public IP address </ins> to communicate with service resources
+- Traffic between your VPC and other services <ins> does not leave the AWS network</ins>
 - <b> Horizontally scaled,redundant and highly available </b> VPC component
 - Allows secure communication between instances and services <b> without adding avilability risks or bandwidth constraints </b> on your traffic
     
@@ -211,7 +211,7 @@
 ## NACLs
 ---
 - Network Access Control List (NACLs)
-- An (optional) layer of Security that acts as a  <b><u>firewall for controlling traffic in and out of subnet(s) </u></b>.
+- An (optional) layer of Security that acts as a  <b><ins>firewall for controlling traffic in and out of subnet(s) </ins></b>.
 - NACLs acts as a virtual firewall at the subnet level
 - VPCs automatically get a default NACL
 - Subnets are associated with NACLs. Subnets can only belong to a single NACL
@@ -255,9 +255,9 @@
 ## Secrets Manager 
 ---
 
-- Helps to <u> <i> manage, retrieve and rotate database credentials, application credentials, OAuth tokens, API keys and other secrets throughout their lifecycles 
-</u></i>
-- Helps to <u> improve security posture </u>, because you no longer need hard-coded credentials in application source code.
+- Helps to <ins> <i> manage, retrieve and rotate database credentials, application credentials, OAuth tokens, API keys and other secrets throughout their lifecycles 
+</ins></i>
+- Helps to <ins> improve security posture </ins>, because you no longer need hard-coded credentials in application source code.
     - Storing the credentials in Secrets Manager helps avoid possible compromise by anyone who can inspect the application or the components. 
     - Replace hard-coded credentials with a runtime call to the Secrets Manager service to retrieve credentials with a runtime call to the Secrets Manager service to retrieve credentials dynamically when you need them. 
 -

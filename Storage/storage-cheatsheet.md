@@ -1,7 +1,7 @@
 - <b>Simple Storage Service (S3) </b> Object-based storage. Store unlimited amount of data without worry of underlying storage infrastructure
-- S3 replicates data across at least <u>  3 AZs to ensure 99.99% Availability </u> and 11'9s of durability
+- S3 replicates data across at least <ins>  3 AZs to ensure 99.99% Availability </ins> and 11'9s of durability
 - Objects contain data (they're like files)
-- - Objects can be size anywhere from <b> <u> 0 Bytes up to 5 Terabytes </u></b>
+- - Objects can be size anywhere from <b> <ins> 0 Bytes up to 5 Terabytes </ins></b>
 - Buckets contain objects. Buckets can also contain folders which can in turn can contain objects
 - Bucket names are unique across all AWS accounts. Like a domain name
 - When you upload a file to S3 successfully you'll receive a HTTP 200 code . <b> Lifecycle Management </b> Objects can be moved between storage classes or objects can be deleted automatically based on schedule
@@ -13,7 +13,7 @@ Logging can be turned to on a bucket to log to track operations performed on obj
 - <b> Bucket Policies </b> are JSON documents which let you write complex control access 
 - <b> ACLs </b> are the legacy method (not depracated) where you grant access to objects and buckets with simple actions 
 - <b> Security in Transit </b> Uploading is done over SSL
-- <b> SSE </b> stands for <u> Server Side Encryption </u>, S3 has 3 options for SSE
+- <b> SSE </b> stands for <ins> Server Side Encryption </ins>, S3 has 3 options for SSE
 - <b> SSE-AES </b> S3 handles the key, uses AES-256 algorithm 
 - <b> SSE-KMS </b> Envelope encryption via AWS KMS and you manage the keys 
 - <b>SSE-C </b> Customer provided key (you manage the key)
