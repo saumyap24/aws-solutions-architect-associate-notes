@@ -1,5 +1,5 @@
 # AWS-Solutions-Architect-Associate-certification-notes
-This notes helped to revise before the certification exam
+These notes helped to revise before the certification exam
 
 # Exam Guide
 |Domain |% of Exam |
