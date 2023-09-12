@@ -1,4 +1,4 @@
-# AWS-Solutions-Architect-Associate-certification-notes
+# AWS-Solutions-Architect-Associate-notes
 These notes helped to revise before the certification exam
 
 # Exam Guide
