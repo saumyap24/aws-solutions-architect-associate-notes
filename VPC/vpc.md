@@ -5,7 +5,7 @@
 - [VPC Peering](#vpc-peering)
 - [Route Tables](#route-tables)
 - [Internet Gateway (IGW)](#internet-gateway-igw)
-- [Bastion / Jumpbox](#bastion-jumpbox)
+- [Bastion/Jumpbox](#bastionjumpbox)
 - [Direct Connect](#direct-connect)
 - [VPC Endpoints](#vpc-endpoints)
     - [Interface Endpoints](#interface-endpoints)
@@ -96,7 +96,7 @@
     <img src="../images/VPC/internet-gateway.jpg" width="60%" height="70%"/>
 
 ---
-## Bastion / Jumpbox
+## Bastion/Jumpbox
 ---
 - Bastions are EC2 instances which are security harden.
 - They are designed to help you gain access to your EC2 instances via SSH or RCP that are in a <b> <ins> private subnet</ins> </b>
