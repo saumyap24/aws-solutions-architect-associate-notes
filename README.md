@@ -1,5 +1,5 @@
 # AWS-Solutions-Architect-Associate-notes
-These notes helped to revise before the certification exam
+This is a collection of study material and follows through guidelines of the AWS Certified Solutions Architect - Associate exam (SAA-C03) exam. These notes helped to revise before the certification exam 
 
 # Exam Guide
 |Domain |% of Exam |
