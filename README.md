@@ -23,6 +23,7 @@ This is a collection of study material and follows through guidelines of the AWS
 - [ElastiCache for Redis](./ElastiCache/elasticache.md)
 - [Application Integration](./Application-Integration/application-integration.md)
 - [QuickSight](./Quicksight/quicksight.md)
+- [Disaster Recovery Migrations](./Disaster-Recovery-Migrations/disaster-recover-migrations.md)
 
 ## CheatSheets
 
@@ -34,5 +35,6 @@ This is a collection of study material and follows through guidelines of the AWS
 - [Aurora](./Aurora/aurora-cheatsheet.md)
 - [Glue](./Glue/glue-cheatsheet.md)
 - [API Gateway](./APIGateway/api-gateway-cheatsheet.md)
+- [Disaster Recovery Migrations](./Disaster-Recovery-Migrations/disaster-recovery-cheatsheet.md)
 - [Overview](overview.md)
 

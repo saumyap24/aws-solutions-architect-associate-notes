@@ -1,0 +1,10 @@
+- [CloudWatch](#cloudwatch)
+
+---
+## CloudWatch
+---
+- CloudWatch Metric Streams 
+    - Continually stream CloudWatch metrics to a destination of your choice, with near-real-time delivery and low latency
+        - Amazon Kinesis Data Firehose (and then its destinations)
+        - 3rd Party service provider: Datadog, Dynatrace, New Relic, Splunk, Sumo 
+        <img src="../images/Monitoring-and-Audit/CloudWatch.jpg" width="60%" />

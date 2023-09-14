@@ -18,7 +18,7 @@
 ---
 
 - AWS Lambda is a <ins><b> serverless, event-driven compute service that lets you run code for virtually any type of application </ins></b> or backend service without provisioning or managing servers.
-- Ypu can trigger Lambda over 200 AWS services and software as a service (Saas) applications and only pay for what you use
+- You can trigger Lambda over 200 AWS services and software as a service (Saas) applications and only pay for what you use
 
 ---
 ## File Processing Architecture

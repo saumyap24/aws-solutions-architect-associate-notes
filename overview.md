@@ -1,3 +1,4 @@
+## Table of Contents
 - [Amazon EBS](#amazon-ebs)
 - [Cloudwatch](#cloudwatch)
 - [AWS Identity and Access Management](#aws-identity-and-access-management)
@@ -11,12 +12,14 @@
 - [AWS Transit Gateway](#aws-transit-gateway)
 - [Amazon EMR](#amazon-emr)
 - [Auto Scaling](#auto-scaling)
+- [S3](#s3)
 - [Cloudfront](#cloudfront)
 - [Secrets Manager](#secrets-manager)
 - [Textract](#textract)
 - [RPO and RTO](#rpo-and-rto)
 - [EC2](#ec2)
-
+- [Network Firewall](#network-firewall)
+- [Security](#security)
 ## Amazon EBS
 ---
 
@@ -35,6 +38,22 @@
 
 ## AWS Identity and Access Management
 ---
+- You should <ins> <i><strong>always associate IAM role to EC2 instances not IAM user for the purpose of accessing other AWS services </ins> </i></strong>
+- <strong> IAM roles </strong> are designed so that your <ins>application can <i>securely make API requests</i> from your instances,</ins> without requiring you to manage the security credentials that the application use.
+    - Instead of creating and distributing your AWS credentials, you can <ins>delegate permission to make API requests using <strong>IAM roles</strong></ins>
+- <strong>AWS Organization</strong> is a service that allows you to manage multiple AWS accounts easily.
+ - <strong>AWS IAM Identity Center </strong> can be integrated with your corporate directory service for centralized authentication. 
+    - This means you can <ins>sign in to multiple AWS accounts with just one set of credentials.</ins> 
+    - This integration helps to streamline the authentication process and makes it <ins>easier for companies to switch between accounts.</ins>
+- <strong>SCP</strong> you can also configure a <ins>service control policy (SCP) </ins>to manage your AWS accounts.
+    - SCPs help you <ins> enforce policies across your organization and control the services </ins> and features accessible to your other account.
+    - prevents unauthorized access
+
+- <strong>Security Token Service (STS)</strong> is the service that you can use to <ins>create and provide trusted users with temporary security credentials</ins> that can control access to your AWS resources. 
+    - <ins>Temporary security credentials work almost identically to the long-term access key credentials</ins> that your IAM users can use.
+- <strong> AWS Control Tower </strong> provides a single location to easily <ins> set up your new well-architected multi-account environment </ins> and govern your AWS workloads with rules for security,operations, and internal compliance. 
+    - You can automate the setup of your AWS environment with best-practices <ins>blueprints for multi-account structure, identity, access management, and account provisioning workflow. </ins>
+    - <ins> offers "guardrails" </ins> for ongoing governance of your AWS environment.
 - You can use an <i><ins>IAM role to specify permissions for users </ins></i> whose identity is federated from your organization or a third-party identity provider (IdP).
     - <b>Federating users with SAML 2.0</b>
         - If your organization already uses an identity provider <ins>software package that supports SAML 2.0 (Security Assertion Markup Language 2.0)</ins>, you can create trust between your organization as an identity provider (IdP) and AWS as the service provider. 
@@ -67,6 +86,11 @@
             - Doesn’t support elastic volumes.
             - Limited to a maximum size of 3 TiB.
             - Limited to a maximum of 1,000 IOPS.
+- RDS automatically performs a failover in the event of any of the following:
+    1. Loss of availability in primary Availability Zone.
+    2. Loss of network connectivity to primary.
+    3. Compute unit failure on primary.
+    4. Storage failure on primary.
 
 
 ## Athena
@@ -159,6 +183,35 @@
     - <ins>Allows schedule scaling </ins> by adding or removing capacity and controls maximum capacity
     - <ins><em> <strong>Only available for EC2 scaling groups </ins></em></strong>
 
+## S3
+---
+- <strong>Server-side encryption (SSE)</strong> is about data encryption at rest-that is, Amazon S3 encrypts your data at the object level as it writes it to disks in its data centers and decrypts it for you when you access it.
+    <img src="./images/Overview/server-side-encryption.jpg" width="87%"/>
+    - You have three mutually exclusive options depending on how you choose to manage the encryption keys:
+
+        1.<strong>Amazon S3-Managed Keys (SSE-S3) </strong>
+
+        2. <strong>AWS KMS-Managed Keys (SSE-KMS)</strong>
+
+        3. <strong>Customer-Provided Keys (SSE-C)</strong>
+    - <strong> S3-Managed Encryption Keys (SSE-S3)</strong>
+        - Amazon S3 will <ins>encrypt each object with a unique key</ins> and as an additional safeguard,<ins> it encrypts the key itself with a master key that it<strong> rotates regularly. </strong></ins>
+    - <strong> SSE-AES </strong> S3 handles the key, uses AES-256 algorithm 
+        - one of the strongest block ciphers available, 256-bit Advanced Encryption Standard (AES-256), to encrypt your data.
+        <img src="./images/Overview/aes-256.jpg" width="57%"/>
+- <strong>Client-side Encryption </strong>using
+    1. AWS KMS-managed customer master key
+    2. client-side master key
+- <strong>Cross-Account Access</strong>
+You can provide another AWS account access to an object that is stored in an S3 bucket. 
+    - These are the methods on how to grant cross-account access to objects that are stored in your own Amazon S3 bucket:
+        - <strong>Resource-based policies and IAM policies </strong> 
+        - <strong>Resource-based Access Control List (ACL) and IAM policies </strong>
+
+    - Cross-account IAM roles for programmatic and console access to S3 bucket objects
+    - <ins> Supports failover controls for S3 Multi-Region access points.</ins>
+- <strong>Requester Pays Buckets </strong> 
+    - Bucket owners pay for all of the Amazon S3 storage and data transfer costs associated with their bucket.
 
 ## CloudFront
 ---
@@ -198,3 +251,33 @@
 ## EC2
 ---
 
+
+---
+## Network Firewall
+---
+- AWS Network Firewall supports domain name stateful network traffic inspection
+- Can create <ins>allow lists and deny lists </ins> with domain names that the stateful rules engine looks for in network traffic
+- AWS Network Firewall is a <ins>stateful, managed network firewall and intrusion detection and prevention service for your virtual private cloud (VPC)</ins> that you created in Amazon Virtual Private Cloud (Amazon VPC).
+    - With Network Firewall, <ins>you can filter traffic at the perimeter of your VPC. </ins>
+    - This includes filtering traffic going to and coming from an internet gateway, NAT gateway, or over VPN or AWS Direct Connect. 
+- Network Firewall uses the open source intrusion prevention system (IPS), Suricata, for stateful inspection. Network Firewall supports Suricata compatible rules.
+---
+## Security
+---
+- The security pillar includes the ability to protect data, systems, and assets to take advantage of cloud technologies to improve security
+
+- <strong>Zero Trust</strong> security is a model where application <ins>components or microservices are considered discrete from each other </ins> and no component or microservice trusts any other.
+
+    ### Design Principles 
+    1. <strong> Implement a strong identity foundation </strong>
+    2. <strong>Enable traceability</strong>
+    3. <strong>Apply security at all layers:</strong>
+        - Apply a <strong>defense in depth approach </strong>  with multiple security controls
+        - <ins>Implementing security to multiple layers </ins>(for example, edge of network, VPC, load balancing, every instance and compute service, operating system, application, and code).
+
+            <img src="./images/Overview/defense-in-depth.jpg" width="57%"/>
+
+    4. <strong>Automate security best practices:</strong>
+    5. <strong>Protect data in transit and at rest:</strong>
+    6. <strong>Keep people away from data:</strong>
+    7. <strong>Prepare for security events:</strong>

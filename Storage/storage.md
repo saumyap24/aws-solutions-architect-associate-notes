@@ -3,6 +3,7 @@
 - [Storage class comparison](#storage-class-comparison)
 - [S3 Security](#s3-security)
 - [S3 Encryption](#s3-encryption)
+- [S3 Objects](#s3-objects)
 - [S3 Data Consistency](#s3-data-consistency)
 - [S3 Cross-Region Replication](#s3-cross-region-replication)
 - [S3 Versioning](#s3-versioning)
@@ -12,6 +13,7 @@
 - [MFA Delete](#mfa-delete)
 - [AWS Snow Family](#aws-snow-family)
 - [Storage Services](#storage-services)
+- [Storage Gateway](#storage-gateway)
 - [Amazon FSx vs EFS](#amazon-fsx-vs-efs)
 - [S3 Object Lock](#s3-object-lock)
     - [Governance mode](#governance-mode)
@@ -34,7 +36,7 @@
 | ------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | - Obejcts contain data(files)                                                   | - Buckets hold objects                                                  |
 | - They are like files                                                           | - Buckets can have folders which can turn in hold objects               |
-| Object may consists of:  </br> - <b> Key </b> this is the name of the object </br> - <b> Value </b> data iteself is made up of sequence of bytes   <br>- <b> Version Id </b> version of object (when versioning is enabled) <br> - <b> Metadata </b> additional information attached to the object                                               | - S3 is universal namespace so domain names must be <ins> Unique </ins> (like having a domain name)    | 
+| Object may consists of:  </br> - <b> Key </b> this is the name of the object </br> - <b> Value </b> data itself is made up of sequence of bytes   <br>- <b> Version Id </b> version of object (when versioning is enabled) <br> - <b> Metadata </b> additional information attached to the object                                               | - S3 is universal namespace so domain names must be <ins> Unique </ins> (like having a domain name)    | 
 
 ---
 ## S3 Storage Classes 
@@ -116,10 +118,15 @@
     - You encrypt your own files before uploading them to S3
 
 ---
+## S3 Objects
+---
+<img src="../images/S3/s3-objects.jpg" width="50%"/>
+
+---
 ## S3 Data Consistency
 ---
 
-| New Object (PUTS)  | Overwrite (PUS) or Delete Objects (DELETES) |
+| New Object (PUTS)  | Overwrite (PUTS) or Delete Objects (DELETES) |
 | -------------------| --------------------------------------------|
 | Read After Write Consistency | Eventual Consistency |
 | When you upload a new S3 Object you are able to read immediately after writing | When you overwrite or delete an object it takes time for S3 to replicate versions to AZs |
@@ -208,7 +215,7 @@
 
 ---
  ## Storage Services 
- ---
+---
 
 - <b> Simple Storage Service (S3)</b>
     - A <ins> serverless object storage service </ins> is created   
@@ -264,6 +271,22 @@
     - Athena provides simplified flexible way to analyze petabytes of data where it lives
     - Analyze data or build applications from an S3 data lake and 30 data sources, including on-premises data sources or other cloud systems using SQL or Python
 
+---
+## Storage Gateway 
+---
+
+- Use Cases:
+    1. disaster recovery 
+    2. backup and restore
+    3. tiered storage
+    4. on-premises cache and low-latency file access
+
+- S3 File Gateway
+    - S3 buckets are accessible using the NFS and SMB protocol
+    - Most recently used data is cached in the file gateway 
+    - Supports S3 standard, S3 Standard IA, S3 One ZOne A, S3 Intelligent Tiering
+    - Transition to S3 Glacier using a Lifecycle Policy
+    
 ## Amazon Fsx vs EFS
 ---
 

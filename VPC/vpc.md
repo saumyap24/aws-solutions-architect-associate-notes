@@ -14,6 +14,7 @@
 - [NACLs](#nacls)
 - [Security Groups](#security-groups)
 - [NACL v/s Security Groups](#nacl-vs-security-groups)
+- [Site to Site VPN , Virtual Private Gateway and Customer Gateway](#site-to-site-vpn--virtual-private-gateway-and-customer-gateway)
 - [Secrets Manager](#secrets-manager)
 
 ---
@@ -110,7 +111,7 @@
 ---
 ## Direct Connect 
 ---
-- AWS Direct Connect is the AWS Solution for establishing dedicated netwrok connections from on-premises locations to AWS
+- AWS Direct Connect is the AWS Solution for establishing dedicated network connections from on-premises locations to AWS
 - Very fast network lower Bandwidth 50M-500M or Higher bandwidth 1GB or 10GB
 
 - Helps reduce network costs and increase bandwidth throughput (great for high traffic networks)
@@ -122,7 +123,7 @@
 ## VPC Endpoints
 ---
 - { <b> Think of a secret tunnel where you don't have tp leave the AWS network</b>}
-- VPC Endpoints allow you to privately connect your VPC to toher AWS services, and VPC endpoint services 
+- VPC Endpoints allow you to privately connect your VPC to other AWS services, and VPC endpoint services 
 - There are two types of VPC Endpoints
     1. Interface endpoints
     2. Gateway Endpoints
@@ -130,7 +131,7 @@
 - Instances in the VPC <ins> do not require a public IP address </ins> to communicate with service resources
 - Traffic between your VPC and other services <ins> does not leave the AWS network</ins>
 - <b> Horizontally scaled,redundant and highly available </b> VPC component
-- Allows secure communication between instances and services <b> without adding avilability risks or bandwidth constraints </b> on your traffic
+- Allows secure communication between instances and services <b> without adding availability risks or bandwidth constraints </b> on your traffic
     
     <img src="../images/VPC/vpc-endpoints.jpg" width="50%" height="40%"/>
 
@@ -213,6 +214,9 @@
 - Network Access Control List (NACLs)
 - An (optional) layer of Security that acts as a  <b><ins>firewall for controlling traffic in and out of subnet(s) </ins></b>.
 - NACLs acts as a virtual firewall at the subnet level
+
+    <img src="../images/VPC/nacl.jpg" width="50%" height="40%"/>
+
 - VPCs automatically get a default NACL
 - Subnets are associated with NACLs. Subnets can only belong to a single NACL
 - Each NACL contains a set of rules that can allow or deny traffic into (inbound) and out of (outbound)
@@ -250,6 +254,12 @@
 ---
 
 <img src="../images/VPC/nacl_security_groups.png" width="77%" height="40%"/>
+<img src="../images/VPC/nacl-vs-security-groups.jpg" width="77%" height="40%"/>
+
+---
+## Site to Site VPN , Virtual Private Gateway and Customer Gateway
+---
+
 
 ---
 ## Secrets Manager 
@@ -258,6 +268,5 @@
 - Helps to <ins> <i> manage, retrieve and rotate database credentials, application credentials, OAuth tokens, API keys and other secrets throughout their lifecycles 
 </ins></i>
 - Helps to <ins> improve security posture </ins>, because you no longer need hard-coded credentials in application source code.
-    - Storing the credentials in Secrets Manager helps avoid possible compromise by anyone who can inspect the application or the components. 
-    - Replace hard-coded credentials with a runtime call to the Secrets Manager service to retrieve credentials with a runtime call to the Secrets Manager service to retrieve credentials dynamically when you need them. 
--
+    - Storing the credentials in Secrets Manager <ins> helps to avoid possible compromise by anyone who can inspect the application </ins> or the components. 
+    - <ins>Replace hard-coded credentials </ins> with a runtime call to the Secrets Manager service to retrieve credentials with a runtime call to the Secrets Manager service to retrieve credentials dynamically when you need them. 
