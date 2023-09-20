@@ -2,6 +2,11 @@
 - [SQS Message Visibility Timeout](#sqs-message-visibility-timeout)
 - [Long Polling](#long-polling)
 - [Streaming and Kinesis](#streaming-and-kinesis)
+    - [Kinesis Data Streams](#kinesis-data-streams)
+    - [Kinesis Data Firehose](#kinesis-data-firehose)
+    - [Kinesis Data Streams vs Firehose](#kinesis-data-streams-vs-firehose)
+    - [Kinesis Data Analytics](#kinesis-data-analytics)
+    - [Kinesis Video Streams](#kinesis-video-streams)
 - [Pub-Sub and SNS](#pubsub-sns)
     - [What is Pub/Sub ?](#what-is-pub-sub)
 - [SQS and SNS - Fan Out Pattern](#sqs-and-sns---fan-out-pattern)
@@ -64,6 +69,41 @@
         - Amazon Kinesis is the AWS fully managed solution for collecting, processing and <ins> analyzing streaming data in the cloud </ins>
 
         <img src="../images/Application-Integration/amazon-kinesis.jpg" width="65%" />
+    ### Kinesis Data Streams
+    - <strong><ins> Capture,process and store data streams</ins> </strong>
+        <img src="../images/Application-Integration/kinesis-data-streams.jpg" width="65%" />
+        - Security:
+            
+            <img src="../images/Application-Integration/kinesis-data-streams-security.jpg" width="65%" />
+            
+            - Control access/ authorization using IAM policies
+            - Encryption in flight using HTTPS endpoints
+            - Encryption at rest using KMS
+            - You can implement encryption/decryption of data on client-side (harder)
+            - VPC endpoints available for Kinesis to access within VPC 
+             - <ins>Monitor API calls using CLoudTrail</ins>
+
+    
+    ### Kinesis Data Firehose
+    - <strong><ins>load data streams into AWS data stores</strong></ins>
+    - Pay for only data that is going through Firehose
+    - Supports many data formats, conversions, 
+    transformations, compression
+     <img src="../images/Application-Integration/kinesis-data-firehose.jpg" width="65%" />
+
+    ### Kinesis Data Streams vs Firehose
+    | Kinesis Data Streams | Kinesis Data Firehose|
+    | ---------------------|----------------------|
+    | - Streaming service for ingest at scale | - Load streaming data into S3 /Redshift /OpenSearch / 3rd Party /custom HTTP |
+    | write Custom code (producer/consumer) | Fully managed |
+    | Real-time (~200 ms) | Near real-time (buffer time min 60 sec) |
+    | Managed scaling (shard splitting / merging) | Automatic scaling |
+    | Data storage for <ins> 1 to 365 days </ins> | <ins>No data storage </ins>|
+    | Supports replay capability | Doesn't support Capability |
+    ### Kinesis Data Analytics
+    - <strong><ins>analyze data streams with SQL or Apache Flink</strong></ins>
+    ### Kinesis Video Streams
+    - <strong><ins>Capture, process and store video streams</strong></ins>
 
 ---
 ## Pub-Sub and SNS

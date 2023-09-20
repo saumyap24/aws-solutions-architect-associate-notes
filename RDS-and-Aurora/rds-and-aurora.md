@@ -2,7 +2,6 @@
 - [RDS Proxy](#rds-proxy)
 - [Aurora](#aurora)
 - [Introduction to Aurora](#introduction-to-aurora)
-- [Scaling with Aurora](#scaling-with-aurora)
 - [Aurora Availability](#aurora-availability)
 - [Fault Tolerance and Durability](#fault-tolerance-and-durability)
 - [Aurora Replicas](#aurora-replicas)
@@ -34,6 +33,7 @@
 ---
 
 - Fully managed Postgres or MySQL compatible database designed by default to scale and fine-tuned to be really fast
+- Aurora <strong><ins>automatically grows in increments of 10GB, up to 128 TB</ins></strong>
 
 ---
 ## Introduction to Aurora
@@ -42,24 +42,20 @@
 - Aurora can run either MySQL or Postgres compatible engines 
 - Aurora  MYSQL is <ins> 5x better performance </ins> than traditional MySQL
 - Aurora Postgres is <ins>3x better performance </ins> than traditional Postgres
-- 1/10th costs of other solutions offering similar performance and availability
-
----
-## Scaling with Aurora
----
-- Start with 10GB of storage, and scale in 10GB increments up to 64TB
-- Storage is autoscaling
-- Computing resources can scale all the way up to 32 vCPUs and 244GB of memory
+- <ins>Aurora Costs more than RDS (20% more) but is more efficient</ins>
 
 ---
 ## Aurora Availability
 ---
-- A minimum of <ins> 3 availability zones </ins> each contain <ins> 2 copies of your data at all times</ins>.
-- That means there are <b><i><ins> 6 copies </b></i></ins> 
-- If in case you lose up to <ins> 2 copies of your data </ins> without affecting write availability
-- If in case you lose up to <ins> 3 copies of your data </ins> without affecting read availability
+- 6 copies of your data in 3 AZ:
+    - Needs only <ins>4 out of 6 copies for writes</ins> (so if one AZ is down then it is fine)
+    - Need only <ins> 3 out of 6 for reads</ins>
+    - self healing with peer-to-peer replication 
+    - Storage is striped across 100s of volumes
+- Automated failover for master happens in less than 30 seconds 
+- Master + up to 15 Aurora Read Replicas serve reads 
 
-    <img src="../images/Aurora/aurora-availability.jpg" width="47%"/>
+<img src="../images/Aurora/ha-aurora.jpg" width="47%"/>
 
 ---
 ## Fault Tolerance and Durability
