@@ -16,14 +16,17 @@ This is a collection of study material and follows through guidelines of the AWS
 - [VPC](./VPC/vpc.md)
 - [CLoudFront](./CloudFront/cloudfront.md)
 - [AWS Lambda](./Lambda/lambda.md)
-- [Aurora](./Aurora/aurora.md)
+- [RDS and Aurora](./RDS-and-Aurora/rds-and-aurora.md)
 - [Redshift](./Redshift/redshift.md)
+- [EC2](./Ec2-Pricing/Ec2.md)
 - [EC2 Pricing](./Ec2-Pricing/ec2-pricing.md)
 - [EFS](./EFS/efs.md)
 - [ElastiCache for Redis](./ElastiCache/elasticache.md)
 - [Application Integration](./Application-Integration/application-integration.md)
 - [QuickSight](./Quicksight/quicksight.md)
 - [Disaster Recovery Migrations](./Disaster-Recovery-Migrations/disaster-recover-migrations.md)
+- [Route 53](./Route53/route53.md)
+
 
 ## CheatSheets
 

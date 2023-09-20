@@ -1,7 +1,10 @@
 - [Queueing (SQS) ](#queueing-sqs)
+- [SQS Message Visibility Timeout](#sqs-message-visibility-timeout)
+- [Long Polling](#long-polling)
 - [Streaming and Kinesis](#streaming-and-kinesis)
 - [Pub-Sub and SNS](#pubsub-sns)
     - [What is Pub/Sub ?](#what-is-pub-sub)
+- [SQS and SNS - Fan Out Pattern](#sqs-and-sns---fan-out-pattern)
 ---
 ## Queueing (SQS) 
 ---
@@ -19,8 +22,36 @@
     - Fully managed <b><ins> queuing service that enables you to decouple </ins> </b>and scale mircroservices, distributed systems, and serverless applications 
     - Use Case: You need to queue up transaction emails to be sent 
     - e.g. Signup, Reset Password
+    - Default retention <ins>4 Days and Max of 14 days</ins>
+    - Limitation of 256 KB per message sent
+    - Low Latency (<10ms on publish and receive)
+    - Can have <ins>duplicate messages</ins> (at least once delivery, occasionally)
+    - <Strong><ins> Unlimited Throughput </strong></ins>
 
     <img src="../images/Application-Integration/SQS.jpg" width="45%" />
+    
+    - Encryption:
+        - In-flight encryption using HTTPS API
+        - At-rest encryption using KMS keys 
+        - Client-side encryption if the client wants to perform encryption/decryption itself
+
+## SQS Message Visibility Timeout
+---
+- <strong><ins>After a message is polled by a customer it becomes invisible to other consumers</ins></strong>
+- By default the " message visibility timeout" is 30 seconds 
+- That means the message has 30 seconds to process
+- If the message is not processed in the visibility timeout, it will be processed twice
+- A consumer could call the `ChangeMessageVisibility` API to get more time
+- If the visibility timeout is high(hours) and consumer crashes, reprocessing will take time
+- If visibility <ins>timeout is too low (seconds)</ins>, we may <ins>get duplicates</ins>
+
+## Long Polling
+---
+- When a consumer requests messages from the queue, it can optionally 'wait' for messages to arrive if there are none in the queue - <strong> Long Polling </strong>
+- Long Polling decreases the number of API calls made to SQS while increasing the latency and efficiency of the application
+- The wait time can be between 1 sec to 20 sec
+- Long Polling is preferable to Short Polling 
+- Long Polling can be enabled at the queue level or at the API level using `WaitTimeSeconds`
 
 ---
 ## Streaming and Kinesis
@@ -58,5 +89,13 @@
 
     <img src="../images/Application-Integration/sns.jpg" width="55%" />
 
+## SQS and SNS - Fan Out Pattern
+---
+- Push once in SNS, receive in all SQS queues that are subscribers
+    <img src="../images/Application-Integration/fan-out.jpg" width="55%" />
+- Fully decoupled : no data loss
+- SNS - Message Filtering 
+    - <strong><ins>JSON policy</strong> used to filter messages sent to SNS topic's subscriptions
+    - If a subscription doesn't have a filter policy, it receives every message
 
 

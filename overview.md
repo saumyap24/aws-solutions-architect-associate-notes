@@ -164,10 +164,13 @@
 ---
 - EMR (Elastic MapReduce)
 - A managed cluster that <ins>simplifies running big data frameworks </ins>like Apache Hadoop and Apache Spark on AWS to process and analyze vast amounts of data.
-- You can process data for analytics purposes and business intelligence workloads using EMR together with Apache Hive and Apache Pig
+- You can process data for analytics purposes and <ins>business intelligence workloads </ins>using EMR together with Apache Hive and Apache Pig
 - You can <ins><em>use EMR to move large amounts of data in and out of other AWS data stores </em></ins> and databases like S3 and DynamoDB
 
     <img src="./images/Overview/emr.jpg" width="87%"/>
+- Purchasing options:
+    - On-Demand:reliable, predictable, won't be terminated 
+    - Reserved (min 1 year): cost savings (EMR will automatically use if available)
 
 ## Auto Scaling 
 ---

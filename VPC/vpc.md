@@ -245,7 +245,7 @@
     - You can specify the source to be another security group
     - An instance can belong to multiple Security Groups, and rules are permissive (instead of restrictive) Meaning if you have one  Security group which has no allow and you add an allow to another than it will allow.
 - Limits:
-    - You can have upto 10,000 Security Groups in a Region (deafult is 2,500)
+    - You can have upto 10,000 Security Groups in a Region (default is 2,500)
     - You can have 60 inbound rules and 60 outbound rules per security Group
     -16 Security Groups per Elastic Network Interface (ENI) (default is 5)
 
@@ -254,11 +254,25 @@
 ---
 
 <img src="../images/VPC/nacl_security_groups.png" width="77%" height="40%"/>
+<img src="../images/VPC/security-groups-vs-nacl.jpg" width="77%" />
 <img src="../images/VPC/nacl-vs-security-groups.jpg" width="77%" height="40%"/>
 
 ---
 ## Site to Site VPN , Virtual Private Gateway and Customer Gateway
 ---
+<img src="../images/VPC/site-to-site-vpn.jpg" width="77%" height="40%"/>
+
+- <strong> Virtual Private Gateway (VGW) </strong>
+    - VPN concentrator on the AWS side of the VPN connection 
+    - VGW is created and attached to the VPC from which you want to create Site-to-Site VPN connection 
+- <strong> Customer Gateway Device (On-Premises) </strong>
+    - What IP address to use?
+        - Public Internet-routable IP address for your Customer Gateway device
+        - If it's behind a NAT device that's enabled for NAT traversal (NAT-T), use the public IP address of the NAT device
+        <img src="../images/VPC/customer-gateway-device.jpg" width="77%"/>
+        - <strong> Important Step: </strong>
+        <ins>enable Route Propagation for the Virtual Private Gateway in the route table </ins> that is associated with your subnets 
+        - <ins> If you need to ping your EC2 instances </ins> from on-premises, make sure you add the <strong>ICMP protocol </strong>on the inbound of your security groups
 
 
 ---

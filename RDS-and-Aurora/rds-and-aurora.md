@@ -1,3 +1,5 @@
+- [RDS](#rds)
+- [RDS Proxy](#rds-proxy)
 - [Aurora](#aurora)
 - [Introduction to Aurora](#introduction-to-aurora)
 - [Scaling with Aurora](#scaling-with-aurora)
@@ -5,6 +7,28 @@
 - [Fault Tolerance and Durability](#fault-tolerance-and-durability)
 - [Aurora Replicas](#aurora-replicas)
 - [Aurora Serverless](#aurora-serverless)
+
+
+---
+## RDS
+---
+
+---
+## RDS Proxy
+---
+
+- Fully managed database proxy for RDS
+- Allows apps to pool and share DB connections established with the database
+- <ins><i>Improving database efficiency by reducing the stress on database resources (e.g CPU, RAM)and minimize open connections (and timeouts)</ins></i>
+- Serverless, autoscaling, highly available (multi-AZ)
+- Reduced RDS and Aurora failover time by up 66%
+- Supports RDS (MySQL,PostgreSQL, MariaDB, MS SQL Server) and Aurora (MySQL, PostgreSQL)
+- No code changes required for most apps
+- <i>Enforce <ins>IAM authentication </ins> for DB, and securely store credentials in <ins>AWS Secrets Manager</ins></i>
+- RDS proxy is <ins>never publicly accessible</ins>
+
+<img src="../images/Aurora/rds-proxy.jpg" width="47%"/>
+
 ---
 ## Aurora
 ---
