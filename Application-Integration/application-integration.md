@@ -96,7 +96,7 @@
     | ---------------------|----------------------|
     | - Streaming service for ingest at scale | - Load streaming data into S3 /Redshift /OpenSearch / 3rd Party /custom HTTP |
     | write Custom code (producer/consumer) | Fully managed |
-    | Real-time (~200 ms) | Near real-time (buffer time min 60 sec) |
+    | <strong> <i><ins>Real-time (~200 ms) | <strong> <i><ins> Near real-time (buffer time min 60 sec) |
     | Managed scaling (shard splitting / merging) | Automatic scaling |
     | Data storage for <ins> 1 to 365 days </ins> | <ins>No data storage </ins>|
     | Supports replay capability | Doesn't support Capability |

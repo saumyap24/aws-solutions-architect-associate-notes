@@ -57,6 +57,8 @@
 
 <img src="../images/Aurora/ha-aurora.jpg" width="47%"/>
 
+<img src="../images/Aurora/db-cluster.jpg" width="47%"/>
+
 ---
 ## Fault Tolerance and Durability
 ---
