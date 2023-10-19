@@ -5,6 +5,7 @@
 - [RDS](#rds)
 - [Athena](#athena)
 - [Kinesis](#kinesis)
+- [DynamoDB](#dynamodb)
 - [Storage Gateway](#storage-gateway)
 - [Elastic Load Balancer](#elastic-load-balancer)
 - [Security Group](#security-group)
@@ -119,6 +120,27 @@
     - durable
     - no missing of messages
 
+## DynamoDB
+- ### How to choose the right partition key ?
+    - What is partition key ?
+        - DynamoDB supports 2 types of primary keys 
+            - Partition key: <ins> A simple primary key,</ins> composed of one attribute known as the partition key.
+            - Partition key and Sort key: Referred to as Composite Primary Key, this type of key is composed of two attributes. 1st one is partition key and 2nd one is sort key
+        <img src="./images/Overview/DynamoDB.png" width="87%"/>
+    - Why do I need a partition key?
+        - DynamoDb stores data as groups of attributes, - Items 
+        - Items are similar to rows or records in other database systems. 
+        - DynamoDB stores and retrieves each item based on the primary key value which must be unique
+        - <ins><strong><i>DynamoDb uses the partition key's value as an input to an internal hash function. </i></ins></strong> The output from the hash function determines the partition in which the item is stored. Each item's location is determined by the hash value of its partition key.
+        <img src="./images/Overview/dynamodb-partition.png" width="87%"/>
+    - DynamoDB automatically supports access patterns using the throughput you have provisioned, or upto your account limits in the on-demand mode
+    - Regardless of the capacity mode you choose <ins><strong><i> if your access pattern exceeds 3000 RCU and 1000 WCU for a single partition key value, your requests might be throttled with a  `ProvisionedThroughputExceededException` error </ins></strong></i>
+    - Recommended for Partition keys :
+        - <ins> Use high-cardinality attributes. </ins> These are attributes that have distinct values for each item, like `emailid`, `employee_no`, `customerid`, `sessionid`, `orderid`
+        - <ins><strong>Use composite attributes </ins></strong> Try to combine more tha one attribute to form a unique key, if that meets your access pattern
+        - <strong><ins>Cache the popular items</ins></strong> when there is high volume of read traffic using DAX (DynamoDB Accelerator)
+        - DAX is fully managed, in-memory cache for DynamoDB that doesn't require developers to manage cache invalidation, data population or cluster management.
+        - DAX also is compatible with DynamoDB API calls, so developer can incorporate it more easily into existing applications
 ## Storage Gateway
 ---
 
