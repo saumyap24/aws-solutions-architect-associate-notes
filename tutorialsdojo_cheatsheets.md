@@ -1,0 +1,13 @@
+ - [IAM](https://tutorialsdojo.com/aws-identity-and-access-management-iam/?src=udemy)
+ - [AWS Directory Service](https://tutorialsdojo.com/aws-directory-service/?src=udemy)
+ - [S3](https://tutorialsdojo.com/amazon-s3/?src=udemy)
+ - [RDS](https://tutorialsdojo.com/amazon-relational-database-service-amazon-rds/?src=udemy)
+ - [Aurora](https://tutorialsdojo.com/amazon-aurora/?src=udemy)
+ - [DynamoDB](https://tutorialsdojo.com/amazon-dynamodb/?src=udemy)
+ - [EBS](https://tutorialsdojo.com/amazon-ebs/?src=udemy)
+ - [Route53](https://tutorialsdojo.com/amazon-route-53/?src=udemy)
+ - [Auto Scaling](https://tutorialsdojo.com/aws-auto-scaling/?src=udemy)
+ - [KMS](https://tutorialsdojo.com/aws-key-management-service-aws-kms/?src=udemy)
+ - [EFS]()
+ - 
+ - [cloudHSM (optional)](https://tutorialsdojo.com/aws-cloudhsm/)

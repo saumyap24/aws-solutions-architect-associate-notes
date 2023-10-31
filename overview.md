@@ -21,6 +21,7 @@
 - [EC2](#ec2)
 - [Network Firewall](#network-firewall)
 - [Security](#security)
+
 ## Amazon EBS
 ---
 
@@ -31,6 +32,21 @@
         - These volumes offer storage with consistent and low-latency performance and are designed for I/O intensive applications such as <ins>large relational or NoSQL databases. </ins>
     - <b>Magnetic</b>
         - for workloads where <ins>data are accessed infrequently, and applications where the <i>lowest storage cost</i> is important. </ins>
+- Here is a list of important information about EBS Volumes:
+
+    - When you create an EBS volume in an Availability Zone, it is automatically replicated within that zone to prevent data loss due to a failure of any single hardware component.
+
+    - An EBS volume can only be attached to one EC2 instance at a time.
+
+    - After you create a volume, you can attach it to any EC2 instance in the same Availability Zone
+
+    - An EBS volume is off-instance storage that can persist independently from the life of an instance. You can specify not to terminate the EBS volume when you terminate the EC2 instance during instance creation.
+
+    - EBS volumes support live configuration changes while in production which means that you can modify the volume type, volume size, and IOPS capacity without service interruptions.
+
+    - Amazon EBS encryption uses 256-bit Advanced Encryption Standard algorithms (AES-256)
+
+    - EBS Volumes offer 99.999% SLA. This
 
 ## Cloudwatch
 ---
@@ -207,6 +223,10 @@
     - To forecast the future load demands by analyzing your historical records for a metric 
     - <ins>Allows schedule scaling </ins> by adding or removing capacity and controls maximum capacity
     - <ins><em> <strong>Only available for EC2 scaling groups </ins></em></strong>
+- In Auto Scaling, the following statements are correct regarding the cooldown period:
+    - It ensures that the Auto Scaling group does not launch or terminate additional EC2 instances before the previous scaling activity takes effect.
+    - Its default value is 300 seconds.
+    - It is a configurable setting for your Auto Scaling group.
 
 ## S3
 ---

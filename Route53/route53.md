@@ -2,6 +2,7 @@
 - [Records TTL](#records-ttl)
 - [CNAME vs Alias](#cname-vs-alias)
 - [Routing Policies](#routing-policies)
+- [Configuring Amazon Route 53 to route traffic to an S3 Bucket](#configuring-amazon-route-53-to-route-traffic-to-an-s3-bucket)
 
 
 ## DNS
@@ -79,4 +80,11 @@
         - Non-AWS resources (specify Latitude and Longitude)
     - You must use Route 53 Traffic Flow to use this feature
 
+## Configuring Amazon Route 53 to route traffic to an S3 Bucket
+---
+- An S3 bucket that is configured to host a static website
+    - You can route traffic for a domain and its subdomains, such as example.com and www.example.com to a single bucket.
+    - Choose the bucket that has the same name that you specified for Record name
+    - The name of the bucket is the same as the name of the record that you are creating
+    - The bucket is configured as a website endpoint
        
